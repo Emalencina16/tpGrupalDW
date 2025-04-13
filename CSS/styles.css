@@ -1,0 +1,83 @@
+/* ------ ESTILOS GENERALES ------ */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ------ ESTILOS HEADER ------ */
+
+/* ------ ESTILOS LANDING ------ */
+
+/* ------ ESTILOS PAGINA CONTACTO ------ */
+
+/* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
+
+.banner_sobreNosotros{
+    background-image: url(../img/banner-sobreNosotros.jpg);
+    width: 100%;
+    /*Un fondo medio difuminado con algun color como azul y la letra grande, 
+    no tan gruesa de un color que resalte del fondo*/
+}
+
+/*Primera seccion: imagen a un lado, puede ser con un sobreado de fondo. Texto a un lado, justificado,
+ de un tamaño legible, que tengan una relacion de tamaño entre la imagen y el texto*/
+
+.primerSeccion_sobreNosotros{
+    display: flex;
+    flex-direction: row;
+}
+
+.personasFestejando{
+    width: 30rem;
+}
+
+.segundaSeccion_sobreNosotros{
+    /*El titulo y el parrafo a la izquierda y la lista a la derecha */
+}
+
+/*Que los iconos tenga un tamaño que se relacion con el texto y viceversa, que se noten. 
+Cambiarlos de lugar si es necesario*/
+
+ul {
+    list-style-type: none; 
+}
+
+.lista_espacios{
+    list-style-image: url('../img/espacios.png');
+    list-style-position: inside;
+}
+
+.lista_comodidad{
+    list-style-image: url('../img/comodidad.png');
+    list-style-position: inside;
+}
+
+.lista_personalizacion{
+    list-style-image: url('../img/personalizacion.png');
+    list-style-position: inside;
+}
+
+.lista_atencion{
+    list-style-image: url('../img/atencion.png');
+    list-style-position: inside;
+}
+
+.tercerSeccion_sobreNosotros{
+    /*El titulo y el primer parrafo se pueden mantener en el medio y despues las imagenes con la descripcion se pueden ir alternando: primera imagen a la derecha y texto a la izquierda, segunda imagen vicerssa y asi sucesivamente (sugerencia como para que no tenga el mismo diseño de la seccion empleados)*/
+}
+
+.tercerSeccion_imgs{
+    /*Le puse ese tamaño como para que no ocupe toda la pantalla , pero no es obligatorio. La unidad de medida rem es una unidad de medida adaptable, 1rem = 16px, como para que lo tengan en cuenta*/
+    width: 15rem;
+}
+
+.cuartaSeccion_empleados{
+    /*Diseño tipo tarjetas, que cada figure este una al lado de la otra horixzontalmente y abajo aparezca la descripcion de cada empleado, destacando un poco el cargo, centrando el texto, añadiendo una sombra a la imagen para que sobresalga un oco (sugerencias)*/
+    
+}
+
+.imgs_empleados{
+    /*Me parecio un buen tamaño pero tambien es editable*/
+    width: 20rem;
+}
+
+/* ------ ESTILOS FOOTER ------ */
