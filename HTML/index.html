@@ -3,10 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ambienta</title>
     <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    
+    <main>
+        <header id="navbar">
+                <!-- Estilizá este header para que quede fijo arriba -->
+                 <!-- Dale padding, background lindo, y alineá todo horizontal -->
+
+            <div>
+                <div id="titulo">
+                    <!-- Hacelo que se vea bien grande y que el link no tenga subrayado -->
+                    <a href="index.html">AMBIENTA</a>
+                </div>
+
+                <div>
+                    <nav>
+                         <!-- Estilizá los enlaces, con hover que cambien de color o algo -->
+                        <a href="informacionInsti.html">Información Institucional</a>
+                        <a href="contacto.html">Contacto</a>
+                        <!-- El buscador tiene que estar bien alineado y que la lupa se vea -->
+                        <div > 
+                            <input
+                            type="text"
+                            id="buscador"
+                            placeholder="Qué estás buscando?" 
+                            aria-label="Buscar" />
+                             <!-- A la lupa dale tamaño y color que se vea -->
+                          <button id="btnBuscar" class="ph ph-magnifying-glass text-gray-400 text-lg"></button>
+                        </div>
+                    </nav>   
+                </div>
+             </div>
+</header>
+<section>
+    <!-- Centrales los textos y poneles márgenes/paddings copados -->
+    <h1>Encontra el salon perfecto para lo que necesites</h1>
+    <p>Ambienta te ofrece una selección exclusiva de salones diseñados y equipados para hacer un evento único y personalizado.</p>   
+</section>
+<section class="cardsSalon">
+     <!-- Ponele display: flex o grid a cardsSalon para que quede tipo card -->
+    <div class="infoSalon">
+        <!-- Estilizá los h2 y p con buena tipografía y márgenes -->
+        <h2>Salones al aire libre</h2>
+        <p>Descubre nuestros salones disponibles al aire libre para tu evento.</p>
+    </div>
+    <div class="contenedorSalonHover">
+        <!-- Estas imágenes tienen que estar superpuestas: la segunda aparece al hacer hover -->
+        <!-- Poné posición relativa en el contenedor y absoluta en la imagen secundaria -->
+        <img src="../img/salones/salonAL.jpg" alt="Salon al aire libre" class="imagenPrincipal">
+        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
+        <img src="../img/salones/salonairelibre.jpg" alt="Salon al aire libre 2" class="imagenSecundaria">
+    </div>
+</section>
+
+<!-- Repetí lo mismo para los otros dos salones -->
+<section class="cardsSalon">
+    <div class="infoSalon">
+        <h2>Salones en interiores</h2>
+        <p>Descubre nuestros salones disponibles en interiores para tu evento.</p>
+    </div>
+    <div class="contenedorSalonHover">
+        <img src="../img/salones/salonCER.jpg" alt="Salon interior" class="imagenPrincipal">
+        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
+        <img src="../img/salones/saloncerr.jpg" alt="Salon interior 2" class="imagenSecundaria">
+    </div>
+</section>
+
+<!-- Repetí lo mismo para los otros dos salones -->
+<section class="cardsSalon">
+    <div class="infoSalon">
+    <h2>Salones para los mas chicos</h2>
+        <p>Descubre nuestros salones disponibles para los mas chicos.</p>
+    </div>
+    <div class="contenedorSalonHover">
+        <img src="../img/salones/salonIF2.jpg" alt="Salon infantil" class="imagenPrincipal">
+        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
+        <img src="../img/salones/salonIF.jpg" alt="Salon infantil 2" class="imagenSecundaria">
+    </div>
+</section>
+
+
+    </main>
 </body>
 </html>
