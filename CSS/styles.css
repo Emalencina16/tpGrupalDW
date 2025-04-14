@@ -1,7 +1,77 @@
 /* ------ ESTILOS GENERALES ------ */
+/* Estilo general del navbar */
+#navbar {
+    background-color: #92101b; 
+    padding: 15px 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Flexbox para organizar el contenido */
+  #navbar > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Título */
+  #titulo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Navegación */
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Links de navegación */
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 10;
+  }
+  
+  nav a:hover {
+    font-weight: bolder;
+  }
+  
+  /* Buscador */
+  #buscador {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  #btnBuscar {
+    margin: auto;
+    background: none;
+    border: none;
+    font-size: 25px;
+    font-weight:bolder;
+    color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  #btnBuscar:hover {
+    font-size: 25px;
+    background-color: #fff;
+    border-radius: 100px;
+    color: #92101b;
+    margin-left: 5px;
+    cursor: pointer;
+  }
 body{
     font-family: 'Montserrat', sans-serif;
-}
+   }
 
 /* ------ ESTILOS HEADER ------ */
 
@@ -11,31 +81,109 @@ body{
 
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
-.banner_sobreNosotros{
+.banner_sobreNosotros {
     background-image: url(../img/banner-sobreNosotros.jpg);
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* Evita que se repita */
+    background-size: cover;         /* Hace que la imagen cubra todo el banner */
+    
     width: 100%;
-    /*Un fondo medio difuminado con algun color como azul y la letra grande, 
-    no tan gruesa de un color que resalte del fondo*/
+    height: 200px;
+    
+    font-size: xx-large;
+    font-weight: 800;
+    display: flex;                  /* Opcional: si querés centrar contenido dentro del banner */
+    align-items: center;            /* Centra verticalmente */
+    justify-content: center;        /* Centra horizontalmente */
+    color: white;                   /* Por si hay texto encima de la imagen */
+    text-shadow: 3px 3px #000;
+     
+    
 }
 
-/*Primera seccion: imagen a un lado, puede ser con un sobreado de fondo. Texto a un lado, justificado,
- de un tamaño legible, que tengan una relacion de tamaño entre la imagen y el texto*/
 
-.primerSeccion_sobreNosotros{
+ .primerSeccion_sobreNosotros {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
+    align-items: center;      /* Centra todo */
+    padding: 50px 100px 50px 100px;            /* Espaciado interno */
+    background-color: #f4f4f4; /* Color de fondo suave */
+    text-align: center;       /* Centra el texto */
 }
 
-.personasFestejando{
-    width: 30rem;
+.personasFestejando {
+    width: 100%;                
+    max-width: none;          
+    height: auto;              
+    border-radius: 20px;       
+    margin-right: 20px;        
+    box-shadow: 5px 5px 5px #333;
 }
 
-.segundaSeccion_sobreNosotros{
-    /*El titulo y el parrafo a la izquierda y la lista a la derecha */
+
+.primerSeccion_sobreNosotros p {
+    font-size: x-large;        
+    line-height: 1.6;         
+    color: #333;              
+    max-width: 800px;         
+    margin: 0 auto;           
+    padding: 0 20px;          
 }
 
-/*Que los iconos tengan un tamaño que se relacion con el texto y viceversa, que se noten. 
-Cambiarlos de lugar si es necesario*/
+
+/*segunda seccion*/
+
+.segundaSeccion_sobreNosotros {
+    padding: 50px;           /* Espaciado alrededor de la sección */
+    background-color: #f9f9f9;    /* Fondo suave */
+    color: #333;                  /* Color de texto oscuro */
+}
+
+.segundaSeccion_titulos {
+    text-align: center;           /* Centra el título y el párrafo */
+    margin-bottom: 40px;          /* Espacio debajo de los títulos */
+}
+
+.segundaSeccion_titulo {
+    font-size: 50px;              /* Tamaño de fuente grande para el título */
+    font-weight: bold;            /* Negrita para el título */
+    color: #92101b;               /* Color principal del título */
+    text-transform: uppercase;    /* Convierte el título a mayúsculas */
+    margin-bottom: 10px;          /* Espacio debajo del título */
+}
+
+.segundaSeccion_titulos p {
+    font-size: 24px;            /* Tamaño de fuente para el párrafo */
+    line-height: 1.6;             /* Espaciado entre líneas */
+    max-width: none;             /* Limita el ancho del párrafo */
+    margin: 0 auto;               /* Centra el párrafo */
+    padding: 0 20px;              /* Espaciado a los lados */
+}
+
+ul {
+    list-style: none;             /* Elimina el estilo por defecto de las listas */
+    padding: 0;                   /* Elimina el padding de la lista */
+}
+
+ul li {
+    font-size: 20px;            /* Tamaño de fuente de los elementos de la lista */
+    margin-bottom: 15px;          /* Espacio entre los ítems de la lista */
+    padding-left: 25px;           /* Espaciado a la izquierda */
+    position: relative;           /* Necesario para el pseudo-elemento */
+}
+
+ul li::before {
+    content: "\2022";             /* Añade un punto de lista personalizado */
+    font-size: 1.5rem;            /* Tamaño del punto */
+    color: #92101b;               /* Color del punto */
+    position: absolute;           /* Posiciona el punto a la izquierda */
+    left: 0;                      /* Coloca el punto en el borde izquierdo */
+    top: 50%;                     /* Centra el punto verticalmente */
+    transform: translateY(-50%);  /* Ajusta la posición verticalmente */
+}
+
+
+
 
 ul {
     list-style-type: none; 
@@ -61,23 +209,142 @@ ul {
     list-style-position: inside;
 }
 
-.tercerSeccion_sobreNosotros{
-    /*El titulo y el primer parrafo se pueden mantener en el medio y despues las imagenes con la descripcion se pueden ir alternando: primera imagen a la derecha y texto a la izquierda, segunda imagen vicerssa y asi sucesivamente (sugerencia como para que no tenga el mismo diseño de la seccion empleados)*/
+/*tercer seccion*/
+
+.tercerSeccion_sobreNosotros {
+    padding: 60px 20px;              /* Espaciado alrededor de la sección */
+    background-color: #f4f4f4;       /* Fondo suave */
+    color: #333;                     /* Color de texto oscuro */
 }
 
-.tercerSeccion_imgs{
-    /*Le puse ese tamaño como para que no ocupe toda la pantalla , pero no es obligatorio. La unidad de medida rem es una unidad de medida adaptable, 1rem = 16px, como para que lo tengan en cuenta*/
-    width: 15rem;
+.tercerSeccion_titulos {
+    text-align: center;              /* Centra el título y el párrafo */
+    margin-bottom: 40px;             /* Espacio debajo de los títulos */
 }
 
-.cuartaSeccion_empleados{
-    /*Diseño tipo tarjetas, que cada figure este una al lado de la otra horixzontalmente y abajo aparezca la descripcion de cada empleado, destacando un poco el cargo, centrando el texto, añadiendo una sombra a la imagen para que sobresalga un oco (sugerencias)*/
-    
+.tercerSeccion_titulos h2 {
+    font-size: 50px;               /* Tamaño grande para el título */
+    font-weight: bold;               /* Negrita para el título */
+    color: #92101b;                  /* Color principal del título */
+    text-transform: uppercase;       /* Convierte el título a mayúsculas */
+    margin-bottom: 20px;             /* Espacio debajo del título */
 }
 
-.imgs_empleados{
-    /*Me parecio un buen tamaño pero tambien es editable*/
-    width: 20rem;
+.tercerSeccion_titulos p {
+    font-size: 24px;               /* Tamaño de fuente para el párrafo */
+    line-height: 1.6;                /* Espaciado entre líneas */
+    max-width: 800px;                /* Limita el ancho del párrafo */
+    margin: 0 auto;                  /* Centra el párrafo */
+    padding: 0 20px;                 /* Espaciado a los lados */
+}
+
+.tercerSeccion_beneficios {
+    display: flex;                   /* Utiliza flexbox para alinear las imágenes y los textos */
+    flex-wrap: row;                 /* Permite que los elementos se ajusten en varias filas si es necesario */
+    justify-content: space-between;  /* Espacio entre los elementos */
+    gap: 10px;                       /* Espaciado entre cada figura */
+}
+
+.tercerSeccion_beneficios figure {
+    width: 50%;                      /* Cada figura ocupa el 22% del ancho */
+    background-color: #fff;          /* Fondo blanco para las figuras */
+    padding: 10px;                   /* Espaciado interno */
+    border-radius: 10px;             /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+   }
+
+
+
+.tercerSeccion_imgs {
+    width: 100%;                     /* Las imágenes ocupan todo el ancho de su contenedor */
+    height: auto;                    /* Mantiene la relación de aspecto */
+    border-radius: 8px;              /* Bordes redondeados */
+    margin-bottom: 15px;             /* Espacio debajo de la imagen */
+}
+
+figcaption {
+    font-size:20px;                 /* Tamaño de fuente para el texto de la leyenda */
+    color: #333;                     /* Color de texto oscuro */
+    text-align: center;              /* Centra el texto de la leyenda */
+}
+
+figcaption strong {
+    font-weight: bold;               /* Hace el texto destacado en negrita */
+    color: #92101b;                  /* Color destacado para el texto */
+}
+
+/* cuarta seccion*/
+
+.cuartaSeccion_sobreNosotros {
+    padding: 60px 20px;
+    background-color: #fff; /* Fondo blanco para diferenciar de la sección anterior */
+    color: #333;
+}
+
+.cuartaSeccion_titulos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cuartaSeccion_titulos h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #92101b;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.cuartaSeccion_titulos p {
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cuartaSeccion_empleados {
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.cuartaSeccion_empleados figure {
+    width: 50%;                      /* Cada figura ocupa el 22% del ancho */
+    background-color: #fff;          /* Fondo blanco para las figuras */
+    padding: 10px;                   /* Espaciado interno */
+    border-radius: 10px;             /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+   }
+
+
+
+.imgs_empleados {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.nombre_empleados {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #92101b;
+    margin-bottom: 5px;
+}
+
+.puesto_empleados {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.descripcion_roles {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
 }
 
 /* ------ ESTILOS FOOTER ------ */
