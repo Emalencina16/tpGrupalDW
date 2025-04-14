@@ -6,34 +6,59 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="/CSS/styles.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <main>
-    <header id="navbar">
-        <div>
-            <div id="titulo">
-                <a href="index.html">AMBIENTA</a>
+        <header>
+            <a href="#" class="logo">
+              <img src="../img/logo-completo.svg" alt="Logo de alquiler de salones">
+            </a>
+            <nav>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca De</a></li>
+                <li><a href="#">Salones y Precios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#" class="btn-reserva">Reserva ahora</a></li>
+              </ul>
+            </nav>        
+            <div class="contacto">
+              <a href="tel:+123456789" class="telefono">+540022356254</a>
             </div>
-
-            <div>
-                <nav>
-                    <a href="informacionInsti.html">Información Institucional</a>
-                    <a href="contacto.html">Contacto</a>
-                    <div class = "buscador-container" > <input
-                        type="text"
-                        id="buscador"
-                        placeholder="Qué estás buscando?" 
-                        aria-label="Buscar" />
-                      <button id="btnBuscar" class="ph ph-magnifying-glass text-gray-400 text-lg"></button>
-                    </div>
-                </nav>   
-            </div>
-         </div>
-</header>
+        </header>
 
 <!--Cree el main para que la barra de navegacion este dentro, seguilo -->
 
 
 </main>
+    <footer>
+        <!-- Logo -->
+        <div class="logo-footer">
+            <img src="../img/logo-completo.svg">
+        </div>
+        <!-- Información de Contacto -->
+        <div class="info-contacto">
+            <p><strong>Alquiler de Salones Ambienta</strong></p>
+            <p>Calle Sarmiento 43, Buenos Aires</p>
+            <p>Tel: +540022356254</p>
+            <p>Email: <a href="#">contacto@ambientasalones.com</a> </p>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="footer-links">
+            <h4>Seguinos:</h4>
+            <div class="social-link"></div>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <!-- Terminos y condiciones -->
+        <div class="politicas">
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+        <p class="copyright">© 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.</p>
+    </footer>  
 </body>
 </html>
