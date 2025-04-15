@@ -1,106 +1,239 @@
 /* CAMBIAR COLOR EN LA LETRA DEL HEADER PORQUE ESTA EN BLANCO Y NO SE LEE (DEPENDIENDO EL FONDO) EN INFO. INST. */
 
 /* ------ ESTILOS GENERALES ------ */
-/* Estilo general del navbar */
-#navbar {
-    background-color: #92101b; 
-    padding: 15px 30px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  /* Flexbox para organizar el contenido */
-  #navbar > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Título */
-  #titulo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Navegación */
-  nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  /* Links de navegación */
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding-right: 10;
-  }
-  
-  nav a:hover {
-    font-weight: bolder;
-  }
-  
-  /* Buscador */
-  #buscador {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  #btnBuscar {
-    margin: auto;
-    background: none;
-    border: none;
-    font-size: 25px;
-    font-weight:bolder;
-    color: #fff;
-    margin-left: 5px;
-    cursor: pointer;
-  }
-
-  #btnBuscar:hover {
-    font-size: 25px;
-    background-color: #fff;
-    border-radius: 100px;
-    color: #92101b;
-    margin-left: 5px;
-    cursor: pointer;
-  }
 body{
     font-family: 'Montserrat', sans-serif;
    }
 
 /* ------ ESTILOS HEADER ------ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .logo  {
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: xx-large;
+    color: #003366;
+  }
+  
+  /* Navegación */
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #007bff;
+  }
+  
+ 
+  .btn-reserva {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff !important;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-reserva:hover {
+    background-color: #0056b3;
+  }
+  
 
+  .contacto .telefono {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .contacto .telefono:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .contacto {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
 /* ------ ESTILOS LANDING ------ */
-
+/* Encabezado principal */
+.intro {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2e2e2e;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Cards container */
+  .cardsSalon {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  /* Card individual */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-width: 350px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Info del salón */
+  .infoSalon h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .infoSalon p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Hover container */
+  .contenedorSalonHover {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .contenedorSalonHover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .imagenPrincipal {
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .imagenSecundaria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .contenedorSalonHover:hover .imagenSecundaria {
+    opacity: 1;
+  }
+  
+  .contenedorSalonHover:hover .imagenPrincipal {
+    opacity: 0;
+  }
+  
+  .contenedorSalonHover p {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+    z-index: 2;
+  }
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
 .banner_sobreNosotros {
-    background-image: url(../img/banner-sobreNosotros.jpg);
-    background-position: center;    /* Centra la imagen */
-    background-repeat: no-repeat;   /* Evita que se repita */
-    background-size: cover;         /* Hace que la imagen cubra todo el banner */
-    
+    position: relative;
     width: 100%;
-    height: 200px;
-    
-    font-size: xx-large;
+    height: 120px; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: x-large;
     font-weight: 800;
-    display: flex;                  /* Opcional: si querés centrar contenido dentro del banner */
-    align-items: center;            /* Centra verticalmente */
-    justify-content: center;        /* Centra horizontalmente */
-    color: white;                   /* Por si hay texto encima de la imagen */
+    color: white;
     text-shadow: 3px 3px #000;
-     
-    
+    overflow: hidden;
+}
+
+.banner_sobreNosotros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/banner-sobreNosotros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.banner_sobreNosotros > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -175,7 +308,7 @@ ul li {
 }
 
 ul li::before {
-    content: "\2022";             /* Añade un punto de lista personalizado */
+   
     font-size: 1.5rem;            /* Tamaño del punto */
     color: #92101b;               /* Color del punto */
     position: absolute;           /* Posiciona el punto a la izquierda */
@@ -351,39 +484,71 @@ figcaption strong {
 
 /* ------ ESTILOS FOOTER ------ */
 
-/* Estilos para las notas */
-.notas-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.nota {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.nota-header {
+footer {
+    background-color: #fff; 
+    color: #003366;         
+    padding: 40px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ccc;
 }
 
-.nota-header h3 {
-    margin: 0;
-    color: #333;
+footer div {
+    flex: 1 1 200px;
 }
 
-.fecha {
+.logo-footer img {
+    max-width: 300px;
+}
+
+.info-contacto p,
+.politicas a,
+.footer-links a,
+.footer-links h4 {
+    margin: 5px 0;
+    color: #003366;
+    text-decoration: none;
+}
+
+.footer-links a i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #0055aa;
+    transition: color 0.3s;
+}
+
+.footer-links a i:hover {
+    color: #001f4d;
+}
+
+.politicas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.politicas a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #003366;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #001f4d;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
     color: #666;
-    font-size: 0.9rem;
-}
-
-.nota-contenido {
-    color: #444;
-    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
 }
