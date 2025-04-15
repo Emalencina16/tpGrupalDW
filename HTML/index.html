@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambienta</title>
-    <link rel="stylesheet" href="/CSS/styles.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Información Institucional</title>
+        <link rel="stylesheet" href= "/CSS/styles.css">
+        <link rel="icon" href="../img/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
 <body>
     <main>
-        <!-- CAMBIAR COLOR EN LA LETRA DEL HEADER PORQUE ESTA EN BLANCO Y NO SE LEE (DEPENDIENDO EL FONDO)-->
+       
         <header>
-            <a href="/HTML/index.html" target="_blank" class="logo">
-              <img src="../img/logo-completo.svg" alt="Logo de alquiler de salones">
-            </a>
+            <a href="/HTML/index.html" target="_blank" class="logo">Ambienta</a>
             <nav>
               <ul>
-                <li><a href="/HTML/index.html" target="_blank" >Inicio</a></li>
-                <li><a href="/HTML/informacionInsti.html" target="_blank" >Acerca De</a></li>
-                <li><a href="#">Salones y Precios</a></li>
-                <li><a href="/HTML/contacto.html" target="_blank" >Contacto</a></li>
+                <li><a href="/HTML/informacionInsti.html" target="_blank">Sobre Nosotros</a></li>
+                <li><a href="/HTML/contacto.html" target="_blank">Contacto</a></li>
                 <li><a href="#" class="btn-reserva">Reserva ahora</a></li>
               </ul>
             </nav>        
@@ -28,68 +28,58 @@
               <a href="tel:+123456789" class="telefono">+540022356254</a>
             </div>
         </header>
-<section>
-    <!-- Centrales los textos y poneles márgenes/paddings copados -->
-    <h1>Encontra el salon perfecto para lo que necesites</h1>
-    <p>Ambienta te ofrece una selección exclusiva de salones diseñados y equipados para hacer un evento único y personalizado.</p>   
-</section>
-<section class="cardsSalon">
-     <!-- Ponele display: flex o grid a cardsSalon para que quede tipo card -->
-    <div class="infoSalon">
-        <!-- Estilizá los h2 y p con buena tipografía y márgenes -->
-        <h2>Salones al aire libre</h2>
-        <p>Descubre nuestros salones disponibles al aire libre para tu evento.</p>
-    </div>
-    <div class="contenedorSalonHover">
-        <!-- Estas imágenes tienen que estar superpuestas: la segunda aparece al hacer hover -->
-        <!-- Poné posición relativa en el contenedor y absoluta en la imagen secundaria -->
-        <img src="../img/salones/salonAL.jpg" alt="Salon al aire libre" class="imagenPrincipal">
-        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
-        <img src="../img/salones/salonairelibre.jpg" alt="Salon al aire libre 2" class="imagenSecundaria">
-    </div>
-</section>
 
-<!-- Repetí lo mismo para los otros dos salones -->
-<section class="cardsSalon">
-    <div class="infoSalon">
-        <h2>Salones en interiores</h2>
-        <p>Descubre nuestros salones disponibles en interiores para tu evento.</p>
-    </div>
-    <div class="contenedorSalonHover">
-        <img src="../img/salones/salonCER.jpg" alt="Salon interior" class="imagenPrincipal">
-        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
-        <img src="../img/salones/saloncerr.jpg" alt="Salon interior 2" class="imagenSecundaria">
-    </div>
-</section>
-
-<!-- Repetí lo mismo para los otros dos salones -->
-<section class="cardsSalon">
-    <div class="infoSalon">
-    <h2>Salones para los mas chicos</h2>
-        <p>Descubre nuestros salones disponibles para los mas chicos.</p>
-    </div>
-    <div class="contenedorSalonHover">
-        <img src="../img/salones/salonIF2.jpg" alt="Salon infantil" class="imagenPrincipal">
-        <p>disfruta de un ambiente relajado y acogedor en un espacio al aire libre.</p>
-        <img src="../img/salones/salonIF.jpg" alt="Salon infantil 2" class="imagenSecundaria">
-    </div>
-</section>
-
-
+        <section class="cardsSalon">
+            <div class="card">
+                <div class="infoSalon">
+                    <h2>Salones al aire libre</h2>
+                    <p>Descubre nuestros salones disponibles al aire libre para tu evento.</p>
+                </div>
+                <div class="contenedorSalonHover">
+                    <img src="../img/salones/salonAL.jpg" alt="Salon al aire libre" class="imagenPrincipal">
+                    <p>Disfrutá de un ambiente relajado y acogedor en un espacio al aire libre.</p>
+                    <img src="../img/salones/salonairelibre.jpg" alt="Salon al aire libre 2" class="imagenSecundaria">
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="infoSalon">
+                    <h2>Salones en interiores</h2>
+                    <p>Descubre nuestros salones disponibles en interiores para tu evento.</p>
+                </div>
+                <div class="contenedorSalonHover">
+                    <img src="../img/salones/salonCER.jpg" alt="Salon interior" class="imagenPrincipal">
+                    <p>Disfrutá de un ambiente relajado y acogedor en un espacio cerrado.</p>
+                    <img src="../img/salones/saloncerr.jpg" alt="Salon interior 2" class="imagenSecundaria">
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="infoSalon">
+                    <h2>Salones para los más chicos</h2>
+                    <p>Descubre nuestros salones disponibles para los más chicos.</p>
+                </div>
+                <div class="contenedorSalonHover">
+                    <img src="../img/salones/salonIF2.jpg" alt="Salon infantil" class="imagenPrincipal">
+                    <p>Disfrutá de un ambiente divertido y seguro para los peques.</p>
+                    <img src="../img/salones/salonIF.jpg" alt="Salon infantil 2" class="imagenSecundaria">
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <!-- Logo -->
+        
         <div class="logo-footer">
             <img src="../img/logo-completo.svg">
         </div>
-        <!-- Información de Contacto -->
+        
         <div class="info-contacto">
             <p><strong>Alquiler de Salones Ambienta</strong></p>
             <p>Calle Sarmiento 43, Buenos Aires</p>
             <p>Tel: +540022356254</p>
             <p>Email: <a href="#">contacto@ambientasalones.com</a> </p>
         </div>
-        <!-- Redes Sociales -->
+        
         <div class="footer-links">
             <h4>Seguinos:</h4>
             <div class="social-link"></div>
