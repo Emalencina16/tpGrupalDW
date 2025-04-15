@@ -110,62 +110,60 @@ header {
     margin: 0 auto;
   }
   
-  /* Cards container */
   .cardsSalon {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-    background-color: #f5f5f5;
-  }
-  
-  /* Card individual */
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    max-width: 350px;
-    flex: 1 1 300px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
   }
   
-  /* Info del salón */
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .infoSalon {
+    flex: 1;
+    padding: 1rem;
+  }
+  
   .infoSalon h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: #333;
-    text-align: center;
+    color: #222;
   }
   
   .infoSalon p {
     font-size: 1rem;
-    color: #666;
-    text-align: center;
+    color: #555;
+    line-height: 1.6;
   }
   
-  /* Hover container */
   .contenedorSalonHover {
+    width: 350px;
+    height: 230px;
     position: relative;
-    width: 100%;
-    height: 200px;
-    margin-top: 1rem;
+    flex-shrink: 0;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   }
   
   .contenedorSalonHover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-  }
-  
-  .imagenPrincipal {
     transition: opacity 0.4s ease-in-out;
+    display: block;
   }
   
   .imagenSecundaria {
@@ -173,29 +171,22 @@ header {
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  .contenedorSalonHover:hover .imagenSecundaria {
-    opacity: 1;
   }
   
   .contenedorSalonHover:hover .imagenPrincipal {
     opacity: 0;
   }
   
-  .contenedorSalonHover p {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0;
-    font-size: 0.95rem;
-    text-align: center;
-    z-index: 2;
+  .contenedorSalonHover:hover .imagenSecundaria {
+    opacity: 1;
   }
+  
+  /* Ocultamos los párrafos dentro de .contenedorSalonHover para que no rompan la estructura */
+  .contenedorSalonHover p {
+    display: none;
+  }
+  
+  
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
@@ -235,34 +226,30 @@ header {
     position: relative;
     z-index: 1;
 }
-
-
- .primerSeccion_sobreNosotros {
+.primerSeccion_sobreNosotros {
     display: flex;
-    flex-direction: row;   
-    align-items: center;      /* Centra todo */
-    padding: 50px 100px 50px 100px;            /* Espaciado interno */
-    background-color: #f4f4f4; /* Color de fondo suave */
-    text-align: center;       /* Centra el texto */
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .personasFestejando {
-    width: 100%;                
-    max-width: none;          
-    height: auto;              
-    border-radius: 20px;       
-    margin-right: 20px;        
-    box-shadow: 5px 5px 5px #333;
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
 
-
 .primerSeccion_sobreNosotros p {
-    font-size: x-large;        
-    line-height: 1.6;         
-    color: #333;              
-    max-width: 800px;         
-    margin: 0 auto;           
-    padding: 0 20px;          
+    flex: 1;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 
