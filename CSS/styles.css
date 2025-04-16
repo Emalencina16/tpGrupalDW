@@ -188,7 +188,34 @@ header {
   
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
-
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+  background-color: rgb(207, 237, 247);
+}
+main p{
+  display: inline;
+  background-color: lightgreen;
+}
+section h3{
+  margin-top: 70px;
+  display: inline-block;
+  background-color: rgb(207, 237, 247);
+}
+section p{
+  text-decoration: underline;
+  color: #003366;
+  font-size: larger;
+  font-weight: bolder;
+}
+div h4{
+  margin-top: 50px;
+}
+div p{
+  font-style: italic;
+}
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
 .banner_sobreNosotros {
