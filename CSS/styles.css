@@ -188,34 +188,130 @@ header {
   
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
-h1{
-  text-align: center;
+
+  /* --- SECCIÓN COMUNICATE --- */
+
+/* Contenedor para dividir en dos columnas */
+.contenedor-secciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
 }
-h2{
-  text-align: center;
-  background-color: rgb(207, 237, 247);
+
+/* --- SECCIÓN COMUNICATE --- */
+.comunicate {
+  flex: 1;
+  min-width: 300px;
 }
-main p{
-  display: inline;
-  background-color: lightgreen;
-}
-section h3{
-  margin-top: 70px;
-  display: inline-block;
-  background-color: rgb(207, 237, 247);
-}
-section p{
-  text-decoration: underline;
+
+.comunicate h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
   color: #003366;
-  font-size: larger;
-  font-weight: bolder;
+  text-align: left;
 }
-div h4{
-  margin-top: 50px;
+
+.comunicate h2 {
+  background-color: #cfeefc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
-div p{
+
+.comunicate h3 {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.comunicate p {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: lightgreen;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #003300;
+}
+
+/* --- FORMULARIO --- */
+.formulario {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formulario h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.formulario input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #005599;
+}
+
+/* --- TEXTO FINAL --- */
+.contacDiv {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  background-color: #f1f8e9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contacDiv h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.contacDiv p {
   font-style: italic;
+  color: #4e4e4e;
 }
+
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
 .banner_sobreNosotros {
