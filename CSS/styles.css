@@ -1,5 +1,12 @@
-/* CAMBIAR COLOR EN LA LETRA DEL HEADER PORQUE ESTA EN BLANCO Y NO SE LEE (DEPENDIENDO EL FONDO) EN INFO. INST. */
+/* Variables grales */
+:root{
+  --color-texto-bordo: #92101b; 
+  --color-texto-grisOscuro: #333;
 
+  --color-fondo-claro: #f4f4f4;
+
+  --margin-b-40: 2.5rem;
+}
 /* ------ ESTILOS GENERALES ------ */
 body{
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +25,6 @@ header {
   /* Logo */
   .logo  {
     font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     font-size: xx-large;
@@ -315,19 +321,8 @@ header {
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
 .banner_sobreNosotros {
-    position: relative;
-    width: 100%;
     height: 120px; 
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: x-large;
-    font-weight: 800;
-    color: white;
     text-shadow: 3px 3px #000;
-    overflow: hidden;
 }
 
 .banner_sobreNosotros::before {
@@ -349,247 +344,95 @@ header {
     position: relative;
     z-index: 1;
 }
-.primerSeccion_sobreNosotros {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 2rem;
-    gap: 2rem;
-    background-color: #f4f4f4;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.personasFestejando {
-    width: 50%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
+.primerSeccion_sobreNosotros {
+    background-color: var(--color-fondo-claro);
+    max-width: 1200px;
+    padding: 5rem 2rem;
 }
 
 .primerSeccion_sobreNosotros p {
     flex: 1;
-    text-align: left;
-    font-size: 1.1rem;
-    line-height: 1.6;
 }
-
 
 /*segunda seccion*/
 
 .segundaSeccion_sobreNosotros {
-    padding: 50px;           /* Espaciado alrededor de la sección */
     background-color: #f9f9f9;    /* Fondo suave */
-    color: #333;                  /* Color de texto oscuro */
-}
-
-.segundaSeccion_titulos {
-    text-align: center;           /* Centra el título y el párrafo */
-    margin-bottom: 40px;          /* Espacio debajo de los títulos */
+    color: var(--color-texto-grisOscuro);                  /* Color de texto oscuro */
 }
 
 .segundaSeccion_titulo {
-    font-size: 50px;              /* Tamaño de fuente grande para el título */
-    font-weight: bold;            /* Negrita para el título */
-    color: #92101b;               /* Color principal del título */
-    text-transform: uppercase;    /* Convierte el título a mayúsculas */
-    margin-bottom: 10px;          /* Espacio debajo del título */
-}
-
-.segundaSeccion_titulos p {
-    font-size: 24px;            /* Tamaño de fuente para el párrafo */
-    line-height: 1.6;             /* Espaciado entre líneas */
-    max-width: none;             /* Limita el ancho del párrafo */
-    margin: 0 auto;               /* Centra el párrafo */
-    padding: 0 20px;              /* Espaciado a los lados */
+    color: var(--color-texto-bordo);               /* Color principal del título */
 }
 
 ul {
     list-style: none;             /* Elimina el estilo por defecto de las listas */
-    padding: 0;                   /* Elimina el padding de la lista */
-}
-
-ul li {
-    font-size: 20px;            /* Tamaño de fuente de los elementos de la lista */
-    margin-bottom: 15px;          /* Espacio entre los ítems de la lista */
-    padding-left: 25px;           /* Espaciado a la izquierda */
-    position: relative;           /* Necesario para el pseudo-elemento */
 }
 
 ul li::before {
    
     font-size: 1.5rem;            /* Tamaño del punto */
-    color: #92101b;               /* Color del punto */
+    color: var(--color-texto-bordo);               /* Color del punto */
     position: absolute;           /* Posiciona el punto a la izquierda */
     left: 0;                      /* Coloca el punto en el borde izquierdo */
     top: 50%;                     /* Centra el punto verticalmente */
     transform: translateY(-50%);  /* Ajusta la posición verticalmente */
 }
 
-
-
-
 ul {
     list-style-type: none; 
-}
-
-.lista_espacios{
-    list-style-image: url('../img/espacios.png');
-    list-style-position: inside;
-}
-
-.lista_comodidad{
-    list-style-image: url('../img/comodidad.png');
-    list-style-position: inside;
-}
-
-.lista_personalizacion{
-    list-style-image: url('../img/personalizacion.png');
-    list-style-position: inside;
-}
-
-.lista_atencion{
-    list-style-image: url('../img/atencion.png');
-    list-style-position: inside;
 }
 
 /*tercer seccion*/
 
 .tercerSeccion_sobreNosotros {
-    padding: 60px 20px;              /* Espaciado alrededor de la sección */
-    background-color: #f4f4f4;       /* Fondo suave */
-    color: #333;                     /* Color de texto oscuro */
+    padding: 3.75rem 1.25rem;              /* Espaciado alrededor de la sección */
+    background-color: var(--color-fondo-claro);       /* Fondo suave */
+    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
 }
 
 .tercerSeccion_titulos {
-    text-align: center;              /* Centra el título y el párrafo */
-    margin-bottom: 40px;             /* Espacio debajo de los títulos */
+    margin-bottom: var(--margin-b-40);             /* Espacio debajo de los títulos */
 }
 
 .tercerSeccion_titulos h2 {
-    font-size: 50px;               /* Tamaño grande para el título */
-    font-weight: bold;               /* Negrita para el título */
-    color: #92101b;                  /* Color principal del título */
-    text-transform: uppercase;       /* Convierte el título a mayúsculas */
-    margin-bottom: 20px;             /* Espacio debajo del título */
-}
-
-.tercerSeccion_titulos p {
-    font-size: 24px;               /* Tamaño de fuente para el párrafo */
-    line-height: 1.6;                /* Espaciado entre líneas */
-    max-width: 800px;                /* Limita el ancho del párrafo */
-    margin: 0 auto;                  /* Centra el párrafo */
-    padding: 0 20px;                 /* Espaciado a los lados */
-}
-
-.tercerSeccion_beneficios {
-    display: flex;                   /* Utiliza flexbox para alinear las imágenes y los textos */
-    flex-wrap: row;                 /* Permite que los elementos se ajusten en varias filas si es necesario */
-    justify-content: space-between;  /* Espacio entre los elementos */
-    gap: 10px;                       /* Espaciado entre cada figura */
-}
-
-.tercerSeccion_beneficios figure {
-    width: 50%;                      /* Cada figura ocupa el 22% del ancho */
-    background-color: #fff;          /* Fondo blanco para las figuras */
-    padding: 10px;                   /* Espaciado interno */
-    border-radius: 10px;             /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-   }
-
-
-
-.tercerSeccion_imgs {
-    width: 100%;                     /* Las imágenes ocupan todo el ancho de su contenedor */
-    height: auto;                    /* Mantiene la relación de aspecto */
-    border-radius: 8px;              /* Bordes redondeados */
-    margin-bottom: 15px;             /* Espacio debajo de la imagen */
+    color: var(--color-texto-bordo);                  /* Color principal del título */
 }
 
 figcaption {
-    font-size:20px;                 /* Tamaño de fuente para el texto de la leyenda */
-    color: #333;                     /* Color de texto oscuro */
-    text-align: center;              /* Centra el texto de la leyenda */
+    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
 }
 
 figcaption strong {
-    font-weight: bold;               /* Hace el texto destacado en negrita */
-    color: #92101b;                  /* Color destacado para el texto */
+    color: var(--color-texto-bordo);                  /* Color destacado para el texto */
 }
 
 /* cuarta seccion*/
 
 .cuartaSeccion_sobreNosotros {
-    padding: 60px 20px;
-    background-color: #fff; /* Fondo blanco para diferenciar de la sección anterior */
-    color: #333;
+    padding: 3.75rem 1.25rem;
+    color: var(--color-texto-grisOscuro);
 }
 
 .cuartaSeccion_titulos {
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-b-40);
 }
 
 .cuartaSeccion_titulos h2 {
-    font-size: 50px;
-    font-weight: bold;
-    color: #92101b;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.cuartaSeccion_titulos p {
-    font-size: 24px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.cuartaSeccion_empleados {
-    display: flex;
-    flex-wrap: row;
-    justify-content: space-around;
-    gap: 30px;
-}
-
-.cuartaSeccion_empleados figure {
-    width: 50%;                      /* Cada figura ocupa el 22% del ancho */
-    background-color: #fff;          /* Fondo blanco para las figuras */
-    padding: 10px;                   /* Espaciado interno */
-    border-radius: 10px;             /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-   }
-
-
-
-.imgs_empleados {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    object-fit: cover;
+    color: var(--color-texto-bordo);
 }
 
 .nombre_empleados {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #92101b;
-    margin-bottom: 5px;
+    color: var(--color-texto-bordo);
 }
 
 .puesto_empleados {
-    font-size: 20px;
-    font-weight: 600;
     color: #444;
-    margin-bottom: 5px;
 }
 
 .descripcion_roles {
-    font-size: 1rem;
     color: #555;
-    line-height: 1.4;
 }
 
 /* ------ ESTILOS FOOTER ------ */
