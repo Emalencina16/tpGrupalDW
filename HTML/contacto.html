@@ -9,80 +9,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="/HTML/index.html" class="logo">Ambienta</a>
-        <nav>
-            <ul>
-                <li><a href="/HTML/informacionInsti.html">Sobre Nosotros</a></li>
-                <li><a href="/HTML/contacto.html">Contacto</a></li>
-                <li><a href="#" class="btn-reserva">Reserva ahora</a></li>
-            </ul>
-        </nav>        
+    
+    <!--Cree el main para que la barra de navegacion este dentro, seguilo -->
+    <main>
+        <header>
+            <a href="index.html" class="logo">Ambienta</a>
+            <nav>
+                <ul>
+                    <li><a href="informacionInsti.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#" class="btn-reserva">Reserva ahora</a></li>
+                </ul>
+            </nav>        
             <div class="contacto">
                 <a href="tel:+123456789" class="telefono">+540022356254</a>
             </div>
-    </header>
+        </header>
+        <div class="contenedor-secciones">    
+        <section class="comunicate">
+            <h1>COMUNICATE CON NOSOTROS</h1>
+            <h2>Nos interesa tu opinion, dejanos tus dudas y seras atendid@ por nuestros asesores.</h2>
+            <h3>Administracion:</h3><p>administracion@ambienta.com</p>
+            <h3>Reservas:</h3><p>reservas@ambienta.com</p>
+            <h3>Cancelaciones:</h3><p> cancelaciones@ambienta.com</p>
+        </section>
 
-<!--Cree el main para que la barra de navegacion este dentro, seguilo -->
-    <main>
-    <div class="contenedor-secciones">    
-    <section class="comunicate">
-        <h1>COMUNICATE CON NOSOTROS</h1>
-        <h2>Nos interesa tu opinion, dejanos tus dudas y seras atendid@ por nuestros asesores.</h2>
-        <h3>Administracion:</h3><p>administracion@ambienta.com</p>
-        <h3>Reservas:</h3><p>reservas@ambienta.com</p>
-        <h3>Cancelaciones:</h3><p> cancelaciones@ambienta.com</p>
-    </section>
-
-    <section class="formulario">
-        <h3>Completa con tus datos para recibir y enterarte de nuestras promociones y financiaciones.</h3>
-        <form action="#" method="post">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-    
-            <label for="telefono">Teléfono:</label><br>
-            <input type="tel" id="telefono" name="telefono" required><br><br>
-    
-            <label for="localidad">Localidad:</label><br>
-            <input type="text" id="localidad" name="localidad" required><br><br>
-    
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    </div>
-    
-    <div class="contacDiv">
-        <h4>Si quieres mas informacion sobre cualquiera de nuestros servicios o estas interesado en los detalles, no dudes en mandarnos por nuestras redes y nos pondremos en contacto contigo lo antes posible.</h4>
-        <p>Muchas Gracias</p>
-    </div>
-</main>
-    <footer>
-        <!-- Logo -->
-        <div class="logo-footer">
-            <img src="../img/logo-completo.svg">
+        <section class="formulario">
+            <h3>Completa con tus datos para recibir y enterarte de nuestras promociones y financiaciones.</h3>
+            <form action="#" method="post">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+        
+                <label for="localidad">Localidad:</label><br>
+                <input type="text" id="localidad" name="localidad" required><br><br>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
         </div>
-        <!-- Información de Contacto -->
-        <div class="info-contacto">
-            <p><strong>Alquiler de Salones Ambienta</strong></p>
-            <p>Calle Sarmiento 43, Buenos Aires</p>
-            <p>Tel: +540022356254</p>
-            <p>Email: <a href="#">contacto@ambientasalones.com</a> </p>
+        
+        <div class="contacDiv">
+            <h4>Si quieres mas informacion sobre cualquiera de nuestros servicios o estas interesado en los detalles, no dudes en mandarnos por nuestras redes y nos pondremos en contacto contigo lo antes posible.</h4>
+            <p>Muchas Gracias</p>
         </div>
-        <!-- Redes Sociales -->
-        <div class="footer-links">
-            <h4>Seguinos:</h4>
-            <div class="social-link"></div>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <!-- Terminos y condiciones -->
-        <div class="politicas">
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos y condiciones</a>
-        </div>
-        <p class="copyright">© 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.</p>
-    </footer>  
-</body>
+    </main>
+        <footer>
+            <!-- Logo -->
+            <div class="logo-footer">
+                <img src="../img/logo-completo.svg">
+            </div>
+            <!-- Información de Contacto -->
+            <div class="info-contacto">
+                <p><strong>Alquiler de Salones Ambienta</strong></p>
+                <p>Calle Sarmiento 43, Buenos Aires</p>
+                <p>Tel: +540022356254</p>
+                <p>Email: <a href="#">contacto@ambientasalones.com</a> </p>
+            </div>
+            <!-- Redes Sociales -->
+            <div class="footer-links">
+                <h4>Seguinos:</h4>
+                <div class="social-link"></div>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <!-- Terminos y condiciones -->
+            <div class="politicas">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+            <p class="copyright">© 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.</p>
+        </footer>  
+    </body>
 </html>
