@@ -1,0 +1,410 @@
+/* Variables grales */
+:root{
+  --color-texto-bordo: #92101b; 
+  --color-texto-grisOscuro: #333;
+
+  --color-fondo-claro: #f4f4f4;
+
+  --margin-b-40: 2.5rem;
+}
+/* ------ ESTILOS GENERALES ------ */
+body{
+    font-family: 'Montserrat', sans-serif;
+   }
+
+/* ------ ESTILOS HEADER ------ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .logo  {
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: xx-large;
+    color: #003366;
+  }
+  
+  /* Navegación */
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #007bff;
+  }
+  
+ 
+  .btn-reserva {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff !important;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-reserva:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .contacto .telefono {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .contacto .telefono:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .contacto {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+
+/* ------ ESTILOS PAGINA CONTACTO ------ */
+
+  /* --- SECCIÓN COMUNICATE --- */
+
+/* Contenedor para dividir en dos columnas */
+.contenedor-secciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* --- SECCIÓN COMUNICATE --- */
+.comunicate {
+  flex: 1;
+  min-width: 300px;
+}
+
+.comunicate h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #003366;
+  text-align: left;
+}
+
+.comunicate h2 {
+  background-color: #cfeefc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.comunicate h3 {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.comunicate p {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: lightgreen;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #003300;
+}
+
+/* --- FORMULARIO --- */
+.formulario {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formulario h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.formulario input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #005599;
+}
+
+/* --- TEXTO FINAL --- */
+.contacDiv {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  background-color: #f1f8e9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contacDiv h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.contacDiv p {
+  font-style: italic;
+  color: #4e4e4e;
+}
+
+/* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
+
+.banner_sobreNosotros {
+    height: 120px; 
+    text-shadow: 3px 3px #000;
+}
+
+.banner_sobreNosotros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/banner-sobreNosotros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.banner_sobreNosotros > * {
+    position: relative;
+    z-index: 1;
+}
+
+.primerSeccion_sobreNosotros {
+    background-color: var(--color-fondo-claro);
+    max-width: 1200px;
+    padding: 5rem 2rem;
+}
+
+.primerSeccion_sobreNosotros p {
+    flex: 1;
+}
+
+/*segunda seccion*/
+
+.segundaSeccion_sobreNosotros {
+    background-color: #f9f9f9;    /* Fondo suave */
+    color: var(--color-texto-grisOscuro);                  /* Color de texto oscuro */
+}
+
+.segundaSeccion_titulo {
+    color: var(--color-texto-bordo);               /* Color principal del título */
+}
+
+ul {
+    list-style: none;             /* Elimina el estilo por defecto de las listas */
+}
+
+ul li::before {
+   
+    font-size: 1.5rem;            /* Tamaño del punto */
+    color: var(--color-texto-bordo);               /* Color del punto */
+    position: absolute;           /* Posiciona el punto a la izquierda */
+    left: 0;                      /* Coloca el punto en el borde izquierdo */
+    top: 50%;                     /* Centra el punto verticalmente */
+    transform: translateY(-50%);  /* Ajusta la posición verticalmente */
+}
+
+ul {
+    list-style-type: none; 
+}
+
+/*tercer seccion*/
+
+.tercerSeccion_sobreNosotros {
+    padding: 3.75rem 1.25rem;              /* Espaciado alrededor de la sección */
+    background-color: var(--color-fondo-claro);       /* Fondo suave */
+    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
+}
+
+.tercerSeccion_titulos {
+    margin-bottom: var(--margin-b-40);             /* Espacio debajo de los títulos */
+}
+
+.tercerSeccion_titulos h2 {
+    color: var(--color-texto-bordo);                  /* Color principal del título */
+}
+
+figcaption {
+    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
+}
+
+figcaption strong {
+    color: var(--color-texto-bordo);                  /* Color destacado para el texto */
+}
+
+/* cuarta seccion*/
+
+.cuartaSeccion_sobreNosotros {
+    padding: 3.75rem 1.25rem;
+    color: var(--color-texto-grisOscuro);
+}
+
+.cuartaSeccion_titulos {
+    margin-bottom: var(--margin-b-40);
+}
+
+.cuartaSeccion_titulos h2 {
+    color: var(--color-texto-bordo);
+}
+
+.nombre_empleados {
+    color: var(--color-texto-bordo);
+}
+
+.puesto_empleados {
+    color: #444;
+}
+
+.descripcion_roles {
+    color: #555;
+}
+
+/* ------ ESTILOS FOOTER ------ */
+
+footer {
+    background-color: #fff; 
+    color: #003366;         
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ccc;
+}
+
+footer div {
+    flex: 1 1 200px;
+}
+
+.logo-footer img {
+    max-width: 300px;
+}
+
+.info-contacto p,
+.politicas a,
+.footer-links a,
+.footer-links h4 {
+    margin: 5px 0;
+    color: #003366;
+    text-decoration: none;
+}
+
+.footer-links a i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #0055aa;
+    transition: color 0.3s;
+}
+
+.footer-links a i:hover {
+    color: #001f4d;
+}
+
+.politicas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.politicas a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #003366;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #001f4d;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
