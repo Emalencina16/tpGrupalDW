@@ -505,3 +505,24 @@ footer .copyright {
     border-top: 1px solid #ccc;
     padding-top: 15px;
 }
+
+
+
+/* galeria */
+.album {
+  align-content: center;
+  display: flex;
+  gap: 30px;
+  margin: 30px;
+}
+
+.card-img-top {
+  max-width: 500px;
+  max-height: 150px;
+  border-radius: 25px;
+}
+
+.title {
+  text-align: center;
+  color: #1864d6;
+}
