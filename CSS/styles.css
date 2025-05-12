@@ -174,7 +174,7 @@ header {
 }
 
 /* ------ ESTILOS LANDING ------ */
-/* Encabezado principal */
+/* Encabezado principal 
 .intro {
     text-align: center;
     padding: 3rem 2rem;
@@ -266,10 +266,7 @@ header {
   }
   
   /* Ocultamos los párrafos dentro de .contenedorSalonHover para que no rompan la estructura */
-  .contenedorSalonHover p {
-    display: none;
-  }
-  
+
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
@@ -304,7 +301,7 @@ nav li {
 
   /* --- SECCIÓN COMUNICATE --- */
 
-/* Contenedor para dividir en dos columnas */
+/* Contenedor para dividir en dos columnas 
 .contenedor-secciones {
   display: flex;
   justify-content: space-between;
@@ -315,7 +312,7 @@ nav li {
   max-width: 1200px;
 }
 
-/* --- SECCIÓN COMUNICATE --- */
+/* --- SECCIÓN COMUNICATE --- 
 .comunicate {
   flex: 1;
   min-width: 300px;
@@ -352,7 +349,7 @@ nav li {
   color: #003300;
 }
 
-/* --- FORMULARIO --- */
+/* --- FORMULARIO ---
 .formulario {
   flex: 1;
   min-width: 300px;
@@ -403,7 +400,7 @@ nav li {
   background-color: #005599;
 }
 
-/* --- TEXTO FINAL --- */
+/* --- TEXTO FINAL ---
 .contacDiv {
   max-width: 1200px;
   width: 100%;
@@ -612,7 +609,7 @@ footer .copyright {
     border-top: 1px solid #ccc;
     padding-top: 15px;
 
-/* galeria */
+/* galeria
 .album {
   align-content: center;
   display: flex;
@@ -625,13 +622,12 @@ footer .copyright {
   max-height: 150px;
   border-radius: 25px;
 }
-
+ */
 .title {
   text-align: center;
   color: #1864d6;
 }
-=======
-}*/
+
 
 /* ------- Extras para el footer ----------- */
 
