@@ -1,6 +1,6 @@
 /* Variables grales */
 :root{
-  --color-texto-bordo: #92101b; 
+  --color-texto-azul: #003366; 
   --color-texto-grisOscuro: #333;
 
   --color-fondo-claro: #f4f4f4;
@@ -14,24 +14,11 @@ body{
 
 .logo {
   font-weight: 800;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: xx-large;
-  color: #003366;
+  color: var(--color-texto-azul);
 }
 
-.navbar-nav {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .navbar-nav .nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
   transition: color 0.3s;
 }
 
@@ -40,14 +27,7 @@ body{
 }
 
 .btn-reserva {
-  padding: 0.5rem 1rem;
-  background-color: #007bff !important;
-  color: #fff !important;
-  border-radius: 5px;
-  font-weight: bold;
   transition: background-color 0.3s;
-  text-decoration: none;
-  display: inline-block;
 }
 
 .btn-reserva:hover {
@@ -55,48 +35,16 @@ body{
   color: #fff !important;
 }
 
-
-
-.contacto .telefono {
-  color: #007bff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 .contacto .telefono:hover {
   text-decoration: underline;
 }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-
-  .contacto {
-    margin-top: 1rem;
-    width: 100%;
-  }
-}
-
-/* ------ ESTILOS LANDING ------ */
-
-/* Encabezado principal */
-
-/* Usamos altura relativa al viewport para que escale mejor */
 /* Sección del banner */
 .banner-unico {
   height: 100vh;
-  background-image: url('../img/inicio/Banner.png'); /* tu imagen */
-  opacity: 0.8;
+  background-image: url('../img/inicio/Banner.png') ; /* tu imagen */
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
 
   animation: revelarBanner 1.5s ease-out forwards;
   transform: translateY(100%);
@@ -111,310 +59,50 @@ body{
   }
 }
 
-/* Contenido centrado */
 .banner-contenido {
   background: #2948918e;
-  padding: 3rem;
 }
 
-/* Tipografía */
 .titulo_banner {
-  font-size: 2.8rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .subtitulo_banner {
-  font-size: 1.4rem;
   color: #dbd8d8 !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .titulo_banner {
-    font-size: 2rem;
-  }
-  .subtitulo_banner {
-    font-size: 1rem;
-  }
+.contenedorSalonHover p {
+  display: none;
 }
-
-.inicio_salones_titulo{
-  color: var(--color-texto-bordo);
-
-}
-
-
-/* Encabezado principal 
-
-.intro {
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: #fff;
-  }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #2e2e2e;
-  }
-  
-  .intro p {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .cardsSalon {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 9px 4px 7px 4px rgb(106 15 15 / 14%);
-    padding: 1.5rem;
-  }
-  
-  .infoSalon {
-    flex: 1;
-    padding: 1rem;
-  }
-  
-  .infoSalon h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #222;
-  }
-  
-  .infoSalon p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  .contenedorSalonHover {
-    width: 350px;
-    height: 230px;
-    position: relative;
-    flex-shrink: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .contenedorSalonHover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.4s ease-in-out;
-    display: block;
-  }
-  
-  .imagenSecundaria {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  
-  .contenedorSalonHover:hover .imagenPrincipal {
-    opacity: 0;
-  }
-  
-  .contenedorSalonHover:hover .imagenSecundaria {
-    opacity: 1;
-  }
-  
-  /* Ocultamos los párrafos dentro de .contenedorSalonHover para que no rompan la estructura */
-
-  .contenedorSalonHover p {
-    display: none;
-  }
 
 .inicio_salones_btn{
-  padding: 2rem;
-  background-color: var(--color-texto-bordo) !important;
-  box-shadow: 9px 4px 7px 4px rgb(106 15 15 / 14%);
-
+  background-color: var(--color-texto-azul) !important;
 }
 
 .reserva_subtitulo, .reserva_titulo{
-  color: #003366;
+  color: var(--color-texto-azul);
 }
 
 .btn-disponibilidad{
-  background-color: #003366 !important;
-  box-shadow: 4px 4px 7px 4px rgba(15, 45, 106, 0.14);
+  background-color: var(--color-texto-azul) !important;
 
 }
-  
-
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
-#titulos{
-  color: #007bff;
-  font-weight: bolder;
-}
-main div h1{
+.contacto_titulo, .contacto_subtitulo{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: black;
 }
-main div h2{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: black;
-}
-main section{
-  background-color: #ffffff;
+
+.contacto_formulario{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-main aside{
-  
+
+.contacto_cierreInfo{
   font-family: 'Times New Roman', Times, serif;
   background-color:#499ffa;
-}
-
-
-
-nav li {
-  display: block;
-  margin-bottom: 8px;
-}
-
-  /* --- SECCIÓN COMUNICATE --- */
-
-/* Contenedor para dividir en dos columnas 
-.contenedor-secciones {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* --- SECCIÓN COMUNICATE --- 
-.comunicate {
-  flex: 1;
-  min-width: 300px;
-}
-
-.comunicate h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #003366;
-  text-align: left;
-}
-
-.comunicate h2 {
-  background-color: #cfeefc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.comunicate h3 {
-  margin-top: 25px;
-  font-size: 1.1rem;
-  color: #003366;
-}
-
-.comunicate p {
-  display: inline-block;
-  margin-top: 5px;
-  background-color: lightgreen;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #003300;
-}
-
-/* --- FORMULARIO ---
-.formulario {
-  flex: 1;
-  min-width: 300px;
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.formulario h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: #003366;
-}
-
-.formulario form {
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario label {
-  margin-top: 12px;
-  font-weight: bold;
-  color: #003366;
-}
-
-.formulario input {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.formulario button {
-  margin-top: 25px;
-  padding: 12px;
-  background-color: #003366;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.formulario button:hover {
-  background-color: #005599;
-}
-
-/* --- TEXTO FINAL ---
-.contacDiv {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-  background-color: #f1f8e9;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.contacDiv h4 {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  color: #000000;
-}
-
-.contacDiv p {
-  font-style: italic;
-  color: #4e4e4e;
 }
 
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
@@ -457,26 +145,26 @@ nav li {
 /*segunda seccion*/
 
 .segundaSeccion_sobreNosotros {
-    background-color: #f9f9f9;    /* Fondo suave */
-    color: var(--color-texto-grisOscuro);                  /* Color de texto oscuro */
+    background-color: #f9f9f9;    
+    color: var(--color-texto-grisOscuro);                  
 }
 
 .segundaSeccion_titulo {
-    color: var(--color-texto-bordo);               /* Color principal del título */
+    color: var(--color-texto-azul);            
 }
 
 ul {
-    list-style: none;             /* Elimina el estilo por defecto de las listas */
+    list-style: none;            
 }
 
 ul li::before {
    
-    font-size: 1.5rem;            /* Tamaño del punto */
-    color: var(--color-texto-bordo);               /* Color del punto */
-    position: absolute;           /* Posiciona el punto a la izquierda */
-    left: 0;                      /* Coloca el punto en el borde izquierdo */
-    top: 50%;                     /* Centra el punto verticalmente */
-    transform: translateY(-50%);  /* Ajusta la posición verticalmente */
+    font-size: 1.5rem;            
+    color: var(--color-texto-azul);              
+    position: absolute;           
+    left: 0;                      
+    top: 50%;                     
+    transform: translateY(-50%);  
 }
 
 ul {
@@ -486,25 +174,25 @@ ul {
 /*tercer seccion*/
 
 .tercerSeccion_sobreNosotros {
-    padding: 3.75rem 1.25rem;              /* Espaciado alrededor de la sección */
-    background-color: var(--color-fondo-claro);       /* Fondo suave */
-    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
+    padding: 3.75rem 1.25rem;              
+    background-color: var(--color-fondo-claro);       
+    color: var(--color-texto-grisOscuro);                     
 }
 
 .tercerSeccion_titulos {
-    margin-bottom: var(--margin-b-40);             /* Espacio debajo de los títulos */
+    margin-bottom: var(--margin-b-40);             
 }
 
 .tercerSeccion_titulos h2 {
-    color: var(--color-texto-bordo);                  /* Color principal del título */
+    color: var(--color-texto-azul);                  
 }
 
 figcaption {
-    color: var(--color-texto-grisOscuro);                     /* Color de texto oscuro */
+    color: var(--color-texto-grisOscuro);                  
 }
 
 figcaption strong {
-    color: var(--color-texto-bordo);                  /* Color destacado para el texto */
+    color: var(--color-texto-azul);                 
 }
 
 /* cuarta seccion*/
@@ -519,11 +207,11 @@ figcaption strong {
 }
 
 .cuartaSeccion_titulos h2 {
-    color: var(--color-texto-bordo);
+    color: var(--color-texto-azul);
 }
 
 .nombre_empleados {
-    color: var(--color-texto-bordo);
+    color: var(--color-texto-azul);
 }
 
 .puesto_empleados {
@@ -535,105 +223,12 @@ figcaption strong {
 }
 
 
-/* ------ ESTILOS FOOTER ------ */
-/*
-footer {
-    background-color: #fff; 
-    color: #003366;         
-    padding: 40px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid #ccc;
-}
-
-footer div {
-    flex: 1 1 200px;
-}
-
-.logo-footer img {
-    max-width: 300px;
-}
-
-.info-contacto p,
-.politicas a,
-.footer-links a,
-.footer-links h4 {
-    margin: 5px 0;
-    color: #003366;
-    text-decoration: none;
-}
-
-.footer-links a i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #0055aa;
-    transition: color 0.3s;
-}
-
-.footer-links a i:hover {
-    color: #001f4d;
-}
-
-.politicas {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.politicas a:hover {
-    text-decoration: underline;
-}
-
-footer a {
-    color: #003366;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #001f4d;
-}
-
-footer .copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #666;
-    border-top: 1px solid #ccc;
-    padding-top: 15px;
-
-/* galeria
-
-.album {
-  align-content: center;
-  display: flex;
-  gap: 30px;
-  margin: 30px;
-}
-
-.card-img-top {
-  max-width: 500px;
-  max-height: 150px;
-  border-radius: 25px;
-}
- */
-.title {
-  text-align: center;
-  color: #1864d6;
-}
-
-
 /* ------- Extras para el footer ----------- */
 
-/* Para que el logo no sobrepase el tamaño original */
 .logo-footer img {
     max-width: 300px;
 }
 
-/* Estilo de los íconos sociales: tamaño y efecto hover */
 .footer-links a i {
     color: #0055aa;
     transition: color 0.3s;
@@ -643,7 +238,6 @@ footer .copyright {
     color: #001f4d;
 }
 
-/* Hover en enlaces de políticas */
 .politicas a:hover {
     text-decoration: underline;
 }
