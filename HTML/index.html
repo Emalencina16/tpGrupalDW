@@ -17,7 +17,7 @@
     </head>
     <body>
         <main>
-            <header class="navbar navbar-expand-md navbar-light bg-white">
+            <header class="navbar navbar-expand-md navbar-light bg-white py-3 px-5">
                 <div class="container d-flex flex-wrap justify-content-between align-items-center">
 
                     <a href="index.html" class="logo">Ambienta</a>
@@ -52,8 +52,20 @@
                 </div>
             </header>
 
-            <section class="container py-5">
+            <section class="banner-unico d-flex justify-content-center align-items-center text-center ">
+                <div class="banner-contenido w-100">
+                  <h1 class="fw-bold text-white titulo_banner">Donde los cumpleaños cobran vida</h1>
+                  <h2 class="h5 fw-semibold mb-4 subtitulo_banner">Alquila la casa perfecta para tu celebración con Ambienta</h2>
+                  <button class="btn btn-primary shadow me-2 " style="width: 15%; height: 3.5rem;">Explora salones</button>
+                  <button class="btn btn-outline-light shadow" style="width: 15%; height: 3.5rem;">Reserva tu fecha</button>
+                </div>
+            </section>
+
+            <section class="container py-5 inicio_divSalones w-100 d-flex justify-content-center align-items-center flex-column">
                 <div class="row g-5">
+
+                    <h1 class="inicio_salones_titulo fw-bolder">Elije tu estilo de fiesta: </h1>
+
                     <!-- Salón al aire libre -->
                     <div class="col-12">
                         <div class="card border-0 shadow rounded-4 p-3 d-flex flex-column flex-md-row align-items-center">
@@ -73,11 +85,12 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Salón en interiores -->
                     <div class="col-12">
-                        <div class="card border-0 shadow rounded-4 p-3 d-flex flex-column flex-md-row align-items-center">
+                        <div class="card border-0  rounded-4 p-3 d-flex flex-column flex-md-row align-items-center">
                             <div class="flex-grow-1 pe-md-4">
-                                <h2 class="h4">Salones en interiores</h2>
+                                <h2 class="h4 fw-semibold">Salones en interiores</h2>
                                 <p>Descubre nuestros salones disponibles en interiores para tu evento.</p>
                             </div>
                             <div id="carouselSalon2" class="carousel slide rounded-3 overflow-hidden shadow" style="width: 350px; height: 230px;" data-bs-ride="carousel" data-bs-interval="2000">
@@ -94,9 +107,9 @@
                     </div>
                     <!-- Salón para los más chicos -->
                     <div class="col-12">
-                        <div class="card border-0 shadow rounded-4 p-3 d-flex flex-column flex-md-row align-items-center">
+                        <div class="card border-0  rounded-4 p-3 d-flex flex-column flex-md-row align-items-center">
                             <div class="flex-grow-1 pe-md-4">
-                                <h2 class="h4">Salones para los más chicos</h2>
+                                <h2 class="h4 fw-semibold">Salones para los más chicos</h2>
                                 <p>Descubre nuestros salones disponibles para los más chicos.</p>
                             </div>
                             <div id="carouselSalon3" class="carousel slide rounded-3 overflow-hidden shadow" style="width: 350px; height: 230px;" data-bs-ride="carousel" data-bs-interval="2000">
@@ -109,6 +122,51 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="inicio_salones_btn btn text-white p-3 my-3 fs-4 w-25 h-50 text-center my-4">Ver más</button>
+            </section>
+            <section class="reserva my-4 bg-body-tertiary p-4">
+                <div class="container mt-5">
+                    <div class="row align-items-center">
+                        <!-- Formulario a la izquierda -->
+                        <div class="col-md-6">
+                            <h4 class="mb-3 reserva_titulo fw-bolder">Reserva fácil y rápido</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="fecha" class="form-label">Fecha del evento</label>
+                                    <input type="date" class="form-control" id="fecha" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="personas" class="form-label">Número de personas</label>
+                                    <input type="number" class="form-control" id="personas" min="1" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="salon" class="form-label">Tipo de evento</label>
+                                    <select class="form-select" id="salon" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option>Evento exterior</option>
+                                        <option>Evento interior</option>
+                                        <option>Evento con pileta</option>
+                                        <option>Evento infantil</option>
+                                        <option>Evento en terraza</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-disponibilidad text-white my-4 p-2">Reservar</button>
+                            </form>
+                        </div>
+
+                        <!-- Texto a la derecha -->
+                        <div class="col-md-6 reserva_textos">
+                            <h3 class="mb-3 reserva_subtitulo fw-bolder">¿Tienes una fecha especial? ¡Hazla inolvidable!</h3>
+                            <p>
+                              Alquila una de nuestras casas equipadas para fiestas de cumpleaños, reuniones familiares y celebraciones especiales. 
+                              Contamos con diferentes tipos de salones adaptados a tus necesidades: desde espacios íntimos hasta áreas amplias con todas las comodidades.
+                            </p>
+                            <p>
+                              Consulta la disponibilidad con unos pocos clics y asegura el mejor lugar para tu evento.
+                            </p>
                         </div>
                     </div>
                 </div>

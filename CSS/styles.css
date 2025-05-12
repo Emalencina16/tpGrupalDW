@@ -10,96 +10,6 @@
 /* ------ ESTILOS GENERALES ------ */
 body{
     font-family: 'Montserrat', sans-serif;
-   }
-
-/* ------ ESTILOS HEADER ------ */
-/*header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    flex-wrap: wrap;
-  }*/
-  
-  /* Logo */
-  /*.logo  {
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: xx-large;
-    color: #003366;
-  }*/
-  
-  /* Navegación */
-  /*nav ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #007bff;
-  }
-  
- 
-  .btn-reserva {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff !important;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-reserva:hover {
-    background-color: #0056b3;
-  }
-  
-
-  .contacto .telefono {
-    color: #007bff;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .contacto .telefono:hover {
-    text-decoration: underline;
-  }
-  
-
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      margin-top: 1rem;
-    }
-  
-    .contacto {
-      margin-top: 1rem;
-      width: 100%;
-    }
-  }*/
-
-/* ------ ESTILOS HEADER ADAPTADO ------- */
-header {
-  background-color: #fff;
-  padding: 1rem 2rem;
 }
 
 .logo {
@@ -174,7 +84,70 @@ header {
 }
 
 /* ------ ESTILOS LANDING ------ */
+
+/* Encabezado principal */
+
+/* Usamos altura relativa al viewport para que escale mejor */
+/* Sección del banner */
+.banner-unico {
+  height: 100vh;
+  background-image: url('../img/inicio/Banner.png'); /* tu imagen */
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  animation: revelarBanner 1.5s ease-out forwards;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Animación de entrada desde abajo */
+@keyframes revelarBanner {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contenido centrado */
+.banner-contenido {
+  background: #2948918e;
+  padding: 3rem;
+}
+
+/* Tipografía */
+.titulo_banner {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subtitulo_banner {
+  font-size: 1.4rem;
+  color: #dbd8d8 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo_banner {
+    font-size: 2rem;
+  }
+  .subtitulo_banner {
+    font-size: 1rem;
+  }
+}
+
+.inicio_salones_titulo{
+  color: var(--color-texto-bordo);
+
+}
+
+
 /* Encabezado principal 
+
 .intro {
     text-align: center;
     padding: 3rem 2rem;
@@ -211,7 +184,7 @@ header {
     gap: 2rem;
     background-color: #fff;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 9px 4px 7px 4px rgb(106 15 15 / 14%);
     padding: 1.5rem;
   }
   
@@ -266,6 +239,28 @@ header {
   }
   
   /* Ocultamos los párrafos dentro de .contenedorSalonHover para que no rompan la estructura */
+
+  .contenedorSalonHover p {
+    display: none;
+  }
+
+.inicio_salones_btn{
+  padding: 2rem;
+  background-color: var(--color-texto-bordo) !important;
+  box-shadow: 9px 4px 7px 4px rgb(106 15 15 / 14%);
+
+}
+
+.reserva_subtitulo, .reserva_titulo{
+  color: #003366;
+}
+
+.btn-disponibilidad{
+  background-color: #003366 !important;
+  box-shadow: 4px 4px 7px 4px rgba(15, 45, 106, 0.14);
+
+}
+  
 
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
@@ -539,6 +534,7 @@ figcaption strong {
     color: #555;
 }
 
+
 /* ------ ESTILOS FOOTER ------ */
 /*
 footer {
@@ -610,6 +606,7 @@ footer .copyright {
     padding-top: 15px;
 
 /* galeria
+
 .album {
   align-content: center;
   display: flex;
