@@ -84,6 +84,7 @@ body{
 }
 
 /* ------ ESTILOS LANDING ------ */
+
 /* Encabezado principal */
 
 /* Usamos altura relativa al viewport para que escale mejor */
@@ -143,6 +144,9 @@ body{
   color: var(--color-texto-bordo);
 
 }
+
+
+/* Encabezado principal 
 
 .intro {
     text-align: center;
@@ -235,6 +239,7 @@ body{
   }
   
   /* Ocultamos los párrafos dentro de .contenedorSalonHover para que no rompan la estructura */
+
   .contenedorSalonHover p {
     display: none;
   }
@@ -256,6 +261,7 @@ body{
 
 }
   
+
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
@@ -290,7 +296,7 @@ nav li {
 
   /* --- SECCIÓN COMUNICATE --- */
 
-/* Contenedor para dividir en dos columnas */
+/* Contenedor para dividir en dos columnas 
 .contenedor-secciones {
   display: flex;
   justify-content: space-between;
@@ -301,7 +307,7 @@ nav li {
   max-width: 1200px;
 }
 
-/* --- SECCIÓN COMUNICATE --- */
+/* --- SECCIÓN COMUNICATE --- 
 .comunicate {
   flex: 1;
   min-width: 300px;
@@ -338,7 +344,7 @@ nav li {
   color: #003300;
 }
 
-/* --- FORMULARIO --- */
+/* --- FORMULARIO ---
 .formulario {
   flex: 1;
   min-width: 300px;
@@ -389,7 +395,7 @@ nav li {
   background-color: #005599;
 }
 
-/* --- TEXTO FINAL --- */
+/* --- TEXTO FINAL ---
 .contacDiv {
   max-width: 1200px;
   width: 100%;
@@ -528,7 +534,79 @@ figcaption strong {
     color: #555;
 }
 
-/* galeria */
+
+/* ------ ESTILOS FOOTER ------ */
+/*
+footer {
+    background-color: #fff; 
+    color: #003366;         
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ccc;
+}
+
+footer div {
+    flex: 1 1 200px;
+}
+
+.logo-footer img {
+    max-width: 300px;
+}
+
+.info-contacto p,
+.politicas a,
+.footer-links a,
+.footer-links h4 {
+    margin: 5px 0;
+    color: #003366;
+    text-decoration: none;
+}
+
+.footer-links a i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #0055aa;
+    transition: color 0.3s;
+}
+
+.footer-links a i:hover {
+    color: #001f4d;
+}
+
+.politicas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.politicas a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #003366;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #001f4d;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+
+/* galeria
+
 .album {
   align-content: center;
   display: flex;
@@ -541,7 +619,7 @@ figcaption strong {
   max-height: 150px;
   border-radius: 25px;
 }
-
+ */
 .title {
   text-align: center;
   color: #1864d6;
