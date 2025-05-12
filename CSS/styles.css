@@ -273,6 +273,35 @@ header {
   
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
+#titulos{
+  color: #007bff;
+  font-weight: bolder;
+}
+main div h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+}
+main div h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+}
+main section{
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main aside{
+  
+  font-family: 'Times New Roman', Times, serif;
+  background-color:#499ffa;
+}
+
+
+
+nav li {
+  display: block;
+  margin-bottom: 8px;
+}
+
   /* --- SECCIÓN COMUNICATE --- */
 
 /* Contenedor para dividir en dos columnas */
