@@ -222,6 +222,11 @@ figcaption strong {
     color: #555;
 }
 
+/* ------- Estilos para Nuevo Salon----------- */
+.btn-agregarSalon{
+  background-color: var(--color-texto-azul) !important;
+}
+
 
 /* ------- Extras para el footer ----------- */
 
