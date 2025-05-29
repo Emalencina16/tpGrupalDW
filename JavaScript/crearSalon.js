@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var direccion = document.getElementById("direccionSalon").value.trim();
     var precio = parseFloat(document.getElementById("precioSalon").value);
 
+    var tematica = document.getElementById("tematicaSalon").value.trim();
+    var descripcion = document.getElementById("descripcionSalon").value.trim();
+    var imagen = document.getElementById("imagenSalon").value.trim();
+
     if (nombre === "" || isNaN(capacidad) || direccion === "" || isNaN(precio)) {
       alert("Completá todos los campos correctamente.");
       return;
@@ -19,7 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: nombre,
       capacidad: capacidad,
       direccion: direccion,
-      precio: precio
+      precio: precio,
+      descripcion: descripcion,
+      tematica: tematica,
+      imagen: imagen
     };
 
     var salonesGuardados = localStorage.getItem("salones");
