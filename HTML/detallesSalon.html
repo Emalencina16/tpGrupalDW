@@ -17,31 +17,38 @@
         <main>
             <header class="navbar navbar-expand-md navbar-light bg-white py-3 px-5">
                 <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
                     <a href="index.html" class="logo text-uppercase text-decoration-none fs-2">Ambienta</a>
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav d-flex gap-4 list-unstyled m-0 p-0 align-items-center text-decoration-none fw-semibold text-black">
                             <li class="nav-item">
-                                <a class="nav-link text-primary fs-5" href="index.html">Inicio</a>
+                                <a href="informacionInsti.html" class="nav-link text-decoration-none fw-semibold text-black">Sobre Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-primary fs-5" href="galeria.html">Catálogo</a>
+                                <a href="contacto.html" class="nav-link text-decoration-none fw-semibold text-black">Contacto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-primary fs-5" href="informacionInsti.html">Institucional</a>
+                                <a href="galeria.html" class="nav-link text-decoration-none fw-semibold text-black">Catálogo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-primary fs-5" href="contacto.html">Contacto</a>
+                                <a href="nuevoSalon.html" class="nav-link text-decoration-none fw-semibold text-black">Agregar salón</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-primary fs-5" href="nuevoSalon.html">Nuevo Salón</a>
+                                <a href="galeria.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="contacto">
+                                    <a href="tel:+123456789" class="telefono text-primary fw-semibold text-decoration-none">+540022356254</a>
+                                </div>
                             </li>
                         </ul>
-                        <a href="contacto.html" class="btn btn-primary text-white btn-reserva px-4 py-2 rounded-pill d-none d-md-block">Reservar</a>
-                    </nav>
+                    </div>
                 </div>
             </header>
 
@@ -50,7 +57,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card p-4 shadow">
-                            <img id="detalleImagenSalon" src="../img/default_salon.jpg" class="img-fluid rounded mb-3" alt="Imagen del salón" style="max-height: 300px; object-fit: cover;">
+                            <img id="detalleImagenSalon" src="../img/default.jpg" class="img-fluid rounded mb-3 object-fit-cover" alt="Imagen del salón">
 
                             <form id="formDetallesSalon">
                                 <div class="mb-3">
@@ -58,8 +65,8 @@
                                     <input type="text" class="form-control" id="detalleNombreSalon" readonly>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="detalleTematicaSalon" class="form-label">Temática</label>
-                                    <input type="text" class="form-control" id="detalleTematicaSalon" readonly>
+                                    <label for="detalleTematicaSalon" class="form-label">Tipo de Salón</label>
+                                    <input type="text" class="form-control" id="detalleTipoSalon" readonly>
                                 </div>
                                 <div class="mb-3">
                                     <label for="detalleCapacidadSalon" class="form-label">Capacidad</label>
@@ -91,44 +98,59 @@
             </section>
         </main>
 
-        <footer class="footer bg-light py-4">
+        <footer class="bg-white text-primary py-5 border-top">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center">
-                        <h5 class="text-primary text-uppercase mb-3">Contacto</h5>
-                        <ul class="list-unstyled text-center">
-                            <li class="mb-2"><a href="tel:+5493415555555" class="text-primary text-decoration-none telefono"><i class="fas fa-phone-alt me-2"></i> +54 9 341 555-5555</a></li>
-                            <li class="mb-2"><a href="mailto:info@ambienta.com" class="text-primary text-decoration-none"><i class="fas fa-envelope me-2"></i> info@ambienta.com</a></li>
-                            <li class="text-primary">Rosario, Santa Fe, Argentina</li>
-                        </ul>
-                    </div>
+                <div class="row gy-4 justify-content-between">
 
-                    <div class="col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center">
-                        <h5 class="text-primary text-uppercase mb-3">Síguenos</h5>
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
+                    <!-- Logo -->
+                    <div class="col-md-4 text-center text-md-start">
+                        <div class="logo-footer">
+                        <img src="../img/logo-completo.svg" class="img-fluid mw-25">
                         </div>
                     </div>
 
-                    <div class="col-md-4 d-flex flex-column align-items-center mt-4 mt-md-0">
-                        <h5 class="text-primary text-uppercase mb-3">Información Legal</h5>
+                    <!-- Info contacto -->
+                    <div class="col-md-4">
+                        <div class="info-contacto">
+                            <p class="fw-bold mb-1">Alquiler de Salones Ambienta</p>
+                            <p class="mb-1">Calle Sarmiento 43, Buenos Aires</p>
+                            <p class="mb-1">Tel: +540022356254</p>
+                            <p class="mb-1">
+                                Email: <a href="#" class="text-primary text-decoration-none">contacto@ambientasalones.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Redes sociales -->
+                    <div class="col-md-3">
+                        <div class="footer-links">
+                            <h5 class="mb-2">Seguinos:</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Políticas -->
+                    <div class="col-12 d-flex flex-column align-items-center mt-4">
                         <div class="politicas text-center">
-                            <a href="#" class="text-primary text-decoration-none mb-1 d-block">Política de privacidad</a>
-                            <a href="#" class="text-primary text-decoration-none mb-1 d-block">Términos y condiciones</a>
+                            <a href="#" class="text-primary text-decoration-none mb-1">Política de privacidad</a>
+                            <a href="#" class="text-primary text-decoration-none mb-1">Términos y condiciones</a>
                         </div>
                     </div>
 
+                    <!-- Copyright -->
                     <div class="col-12 mt-4">
                         <p class="text-center text-muted border-top pt-3 mb-0 small">
                             © 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.

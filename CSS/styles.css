@@ -7,16 +7,19 @@
 
   --margin-b-40: 2.5rem;
 }
+
 /* ------ ESTILOS GENERALES ------ */
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Estilos del header */
 
 .logo {
   font-weight: 800;
   color: var(--color-texto-azul);
 }
-
 
 .navbar-nav .nav-link {
   transition: color 0.3s;
@@ -39,6 +42,7 @@ body{
   text-decoration: underline;
 }
 
+/* Estilos del Index */
 /* Sección del banner */
 .banner-unico {
   height: 100vh;
@@ -73,8 +77,13 @@ body{
 
 }
 
-.contenedorSalonHover p {
-  display: none;
+.btn-explora, .btn-reservaInicio{
+  height: 3.5rem;
+}
+
+.carusel-inicio{
+  width:21.8rem;
+  height: 14.3rem;
 }
 
 .inicio_salones_btn{
@@ -119,7 +128,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/banner-sobreNosotros.jpg);
+    background-image: url(../img/institucional/banner-sobreNosotros.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,6 +229,16 @@ figcaption strong {
 
 .descripcion_roles {
     color: #555;
+}
+
+/* ESTILOS GALERIA SALONES */
+.imgSalon{
+  height: 13rem;
+}
+
+/* ESTILOS DETALLE SALON */
+#detalleImagenSalon {
+    max-height: 18.7rem;
 }
 
 /* ------- Estilos para Nuevo Salon----------- */

@@ -16,7 +16,7 @@
     </head>
     <body>
         <main>
-            <header class="navbar navbar-expand-md navbar-light bg-white py-3 px-5">
+            <header class="navbar navbar-expand-md navbar-light bg-white py-3 px-1">
                 <div class="container d-flex flex-wrap justify-content-between align-items-center">
 
                     <a href="index.html" class="logo text-uppercase text-decoration-none fs-2">Ambienta</a>
@@ -43,27 +43,25 @@
                             <li class="nav-item">
                                 <a href="galeria.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
                             </li>
-                            
+                            <li class="nav-item">
+                                <div class="contacto">
+                                    <a href="tel:+123456789" class="telefono text-primary fw-semibold text-decoration-none">+540022356254</a>
+                                </div>
+                            </li>
                         </ul>
-                    </div>
-
-                    <div class="d-flex align-items-center mt-3 mt-md-0 gap-3">
-                        <div class="contacto d-none d-md-block">
-                            <a href="tel:+123456789" class="telefono text-primary fw-semibold text-decoration-none">+540022356254</a>
-                        </div>
                     </div>
                 </div>
             </header>
-           <section class="album py-5 bg-light">
+           <section class="album py-5 bg-light w-100">
                 <div class="container d-flex align-items-center flex-column">
                       <h1 class="title text-center text-primary mb-5">Salones Al Aire Libre</h1>
                       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
                         <!-- Aurora -->
                         <div class="col">
-                            <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones/sal.webp" class="img-fluid object-fit-cover" alt="Salón Aurora" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                            <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column" >
+                                <img src="../img/salones exterior/aurora.webp" class="imgSalon card-img-top" alt="Salón Aurora">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Exterior">
                                     <h5 class="card-title">Salón Aurora</h5>
                                     <p class="card-text mb-4">Gualeguaychú, Entre Ríos.<br>España 2369<br>Capacidad: 150</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -76,9 +74,9 @@
 
                         <!-- Zafiro -->
                         <div class="col">
-                            <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones/sal2.jpg" class="img-fluid object-fit-cover" alt="Salón Zafiro" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                            <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column" >
+                                <img src="../img/salones exterior/zafiro.jpg" class="imgSalon card-img-top" alt="Salón Zafiro">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Exterior">
                                     <h5 class="card-title">Salón Zafiro</h5>
                                     <p class="card-text mb-4">El Bolsón, Río Negro.<br>Urquiza 1557<br>Capacidad: 130</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -92,8 +90,8 @@
                         <!-- Ébano -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones/sal3.jpeg" class="img-fluid object-fit-cover" alt="Salón Ébano" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones exterior/ebano.jpeg" class="imgSalon card-img-top" alt="Salón Ébano">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Exterior">
                                     <h5 class="card-title">Salón Ébano</h5>
                                     <p class="card-text mb-4">Tilcara, Jujuy.<br>Batalla de Caseros 583<br>Capacidad: 90</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -107,8 +105,8 @@
                         <!-- Horizonte -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones/sal4.jpg" class="img-fluid object-fit-cover" alt="Salón Horizonte" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones exterior/horizonte.jpg" class="imgSalon card-img-top" alt="Salón Horizonte">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Exterior">
                                     <h5 class="card-title">Salón Horizonte</h5>
                                     <p class="card-text mb-4">San Martín de los Andes, Neuquén.<br>Cochabamba 749<br>Capacidad: 100</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -122,8 +120,8 @@
                         <!-- Prisma -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones/sal5.jpg" class="img-fluid object-fit-cover" alt="Salón Prisma" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones exterior/prisma.jpg" class="imgSalon card-img-top" alt="Salón Prisma">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Exterior">
                                     <h5 class="card-title">Salón Prisma</h5>
                                     <p class="card-text mb-4">Villa General Belgrano, Córdoba.<br>Falso 123<br>Capacidad: 200</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -134,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center" style="height: 4rem;">Agregar Nuevo Salón</a>
+                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center h-75 p-2">Agregar Nuevo Salón</a>
                 </div>
             </section>
 
@@ -145,8 +143,8 @@
                         <!-- Encanto-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones interior/salonEncanto.png" class="img-fluid object-fit-cover" alt="Salón Encanto" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones interior/salonEncanto.png" class="imgSalon card-img-top" alt="Salón Encanto">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Interior">
                                     <h5 class="card-title">Salón Encanto</h5>
                                     <p class="card-text mb-4">San Miguel de Tucumán, Tucumán. <br> Av. Sarmiento 1123 <br> Capacidad: 120</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -160,8 +158,8 @@
                         <!-- Las Estrellas-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones interior/salonEstrellas.png" class="img-fluid object-fit-cover" alt="Salón Las estrellas" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones interior/salonEstrellas.png" class="imgSalon card-img-top" alt="Salón Las estrellas">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Interior">
                                     <h5 class="card-title">Salón Las Estrellas</h5>
                                     <p class="card-text mb-4">Salta Capital, Salta. <br> Belgrano 456 <br> Capacidad: 180</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -175,8 +173,8 @@
                         <!-- Jardin del sol-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones interior/salonJardin.jpg" class="img-fluid object-fit-cover" alt="Salón Jardin del sol" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones interior/salonJardin.jpg" class="imgSalon card-img-top" alt="Salón Jardin del sol">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Interior">
                                     <h5 class="card-title">Salón Jardín del Sol</h5>
                                     <p class="card-text mb-4">San Rafael, Mendoza. <br> Mitre 879 <br> Capacidad: 100</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -190,8 +188,8 @@
                         <!-- Aires del norte-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones interior/salonAires.png" class="img-fluid object-fit-cover" alt="Salón Aires del Norte" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones interior/salonAires.png" class="imgSalon card-img-top" alt="Salón Aires del Norte">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Interior">
                                     <h5 class="card-title">Salón Aires del Norte</h5>
                                     <p class="card-text mb-4">San Fernando del Valle, Catamarca. <br> Av. Güemes 1330 <br> Capacidad: 90</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -205,8 +203,8 @@
                         <!-- Brisas de la sierra-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones interior/salonBrisas.jpg" class="img-fluid object-fit-cover" alt="Salón Brisas de la Sierra" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones interior/salonBrisas.jpg" class="imgSalon card-img-top" alt="Salón Brisas de la Sierra">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Interior">
                                     <h5 class="card-title">Salón Brisas de la Sierra</h5>
                                     <p class="card-text mb-4">San Luis, San Luis. <br> Bolívar 742 <br> Capacidad: 130</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -218,19 +216,19 @@
                         </div>
 
                     </div>
-                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center" style="height: 4rem;">Agregar Nuevo Salón</a>
+                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center h-75 p-2">Agregar Nuevo Salón</a>
                 </div>
             </section>
             <section class="album py-5 bg-light">
                 <div class="container d-flex align-items-center flex-column">
-                      <h1 class="title text-center text-primary mb-5">Salones Lounge</h1>
+                      <h1 class="title text-center text-primary mb-5">Salones de Terraza</h1>
                       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
                         <!-- Alma lounge -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones lounge/almalounge.jpg" class="img-fluid object-fit-cover" alt="Salón Alma Lounge" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones lounge/almalounge.jpg" class="imgSalon card-img-top" alt="Salón Alma Lounge">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Terraza">
                                     <h5 class="card-title">Salón Alma Lounge</h5>
                                     <p class="card-text mb-4">Parlermo Soho, CABA.<br>Honduras 4771<br>Capacidad: 100</p>
                                     <div class="mt-auto">
@@ -243,8 +241,8 @@
                         <!-- Brisas Nocturnas -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones lounge/brisasnocturnas.png" class="img-fluid object-fit-cover" alt="Salón Brisas Nocturnas" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones lounge/brisasnocturnas.png" class="imgSalon card-img-top" alt="Salón Brisas Nocturnas">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Terraza">
                                     <h5 class="card-title">Salón Brisas Nocturnas</h5>
                                     <p class="card-text mb-4">Zona Güemes, Mar del Plata.<br>Av. Colón 2875<br>Capacidad: 80</p>
                                     <div class="mt-auto">
@@ -257,8 +255,8 @@
                         <!-- Jardin Secreto -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones lounge/jardinsecreto.jpg" class="img-fluid object-fit-cover" alt="Salón Jardín Secreto" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones lounge/jardinsecreto.jpg" class="imgSalon card-img-top" alt="Salón Jardín Secreto">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Terraza">
                                     <h5 class="card-title">Salón Jardín Secreto</h5>
                                     <p class="card-text mb-4">Quinta Sección, Mendoza<br>Belgrano 925<br>Capacidad: 90</p>
                                     <div class="mt-auto">
@@ -271,8 +269,8 @@
                         <!-- Refugio Chill -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones lounge/refugiochill.jpg" class="img-fluid object-fit-cover" alt="Salón Refugio Chill" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones lounge/refugiochill.jpg" class="imgSalon card-img-top" alt="Salón Refugio Chill">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Terraza">
                                     <h5 class="card-title">Salón Refugio Chill</h5>
                                     <p class="card-text mb-4">Barrio Pichincha, Rosario.<br>Jujuy 1852<br>Capacidad: 60</p>
                                     <div class="mt-auto">
@@ -285,8 +283,8 @@
                         <!-- Tierra Calida -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones lounge/tierracalida.jpg" class="img-fluid object-fit-cover" alt="Salón Tierra Cálida" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones lounge/tierracalida.jpg" class="imgSalon card-img-top" alt="Salón Tierra Cálida">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Terraza">
                                     <h5 class="card-title">Salón Tierra Cálida</h5>
                                     <p class="card-text mb-4">Nueva Córdoba, Córdoba Capital<br>Bv. San Juan 1440<br>Capacidad: 120</p>
                                     <div class="mt-auto">
@@ -297,20 +295,20 @@
                         </div>
 
                     </div>
-                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center" style="height: 4rem;">Agregar Nuevo Salón</a>
+                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center h-75 p-2">Agregar Nuevo Salón</a>
                 </div>
             </section>
 
             <section class="album py-5 bg-body-secondary">
                 <div class="container d-flex align-items-center flex-column">
-                      <h1 class="title text-center text-primary mb-5">Salones con piscinas</h1>
+                      <h1 class="title text-center text-primary mb-5">Salones con Piscinas</h1>
                       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
                         <!-- Coliseo -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones-con-piscinas/pile-5.jpeg" class="img-fluid object-fit-cover" alt="Salón Coliseo" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones-con-piscinas/pile-5.jpeg" class="imgSalon card-img-top" alt="Salón Coliseo">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Pileta">
                                     <h5 class="card-title">Salón Coliseo</h5>
                                     <p class="card-text mb-4">Crespo, Entre Ríos.<br>Garrigo 4322<br>Capacidad: 40</p>
                                     <div class="mt-auto">
@@ -323,8 +321,8 @@
                         <!-- El Espejo -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones-con-piscinas/pile-2.webp" class="img-fluid object-fit-cover" alt="Salón El Espejo" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones-con-piscinas/pile-2.webp" class="imgSalon card-img-top" alt="Salón El Espejo">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Pileta">
                                     <h5 class="card-title">Salón El Espejo</h5>
                                     <p class="card-text mb-4">Villa Gesell, Buenos Aires.<br>Las chacras 1327<br>Capacidad: 25</p>
                                     <div class="mt-auto">
@@ -337,8 +335,8 @@
                         <!-- La Bodega -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones-con-piscinas/pile-3.jpg" class="img-fluid object-fit-cover" alt="Salón La Bodega" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones-con-piscinas/pile-3.jpg" class="imgSalon card-img-top" alt="Salón La Bodega">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Pileta">
                                     <h5 class="card-title">Salón La Bodega</h5>
                                     <p class="card-text mb-4">Carlos Paz, Cordoba.<br>Los cardenales 3256<br>Capacidad: 60</p>
                                     <div class="mt-auto">
@@ -351,8 +349,8 @@
                         <!-- El Remanso -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones-con-piscinas/pile-4.jpg" class="img-fluid object-fit-cover" alt="Salón El Remanso" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones-con-piscinas/pile-4.jpg" class="imgSalon card-img-top" alt="Salón El Remanso">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Pileta">
                                     <h5 class="card-title">Salón El Remanso</h5>
                                     <p class="card-text mb-4">Colonia Avellaneda, Entre Rios.<br>Av Ejercito 1567<br>Capacidad: 30</p>
                                     <div class="mt-auto">
@@ -365,8 +363,8 @@
                         <!-- El Refugio  -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones-con-piscinas/pile-1.jpeg" class="img-fluid object-fit-cover" alt="Salón El Refugio" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones-con-piscinas/pile-1.jpeg" class="imgSalon card-img-top" alt="Salón El Refugio">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Pileta">
                                     <h5 class="card-title">Salón El Refugio</h5>
                                     <p class="card-text mb-4">Paraná, Entre Rios.<br>Echague 879<br>Capacidad: 45</p>
                                     <div class="mt-auto">
@@ -377,7 +375,7 @@
                         </div>
 
                     </div>
-                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center" style="height: 4rem;">Agregar Nuevo Salón</a>
+                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center h-75 p-2">Agregar Nuevo Salón</a>
                 </div>
             </section>
 
@@ -389,8 +387,8 @@
                         <!-- Mundo Mágico-->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones infantiles/mundoMagico.png" class="img-fluid object-fit-cover" alt="Salón Alma Lounge" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones infantiles/mundoMagico.png" class="imgSalon card-img-top" alt="Salón Alma Lounge">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Infantil">
                                     <h5 class="card-title">Salón Mundo Mágico</h5>
                                     <p class="card-text mb-4">Paraná, Entre Ríos<br>Avenida Ramírez 1520<br>Capacidad: 60</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -404,8 +402,8 @@
                         <!-- Dulce Aventura -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones infantiles/dulceAventura.png" class="img-fluid object-fit-cover" alt="Salón Brisas Nocturnas" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones infantiles/dulceAventura.png" class="imgSalon card-img-top" alt="Salón Brisas Nocturnas">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Infantil">
                                     <h5 class="card-title">Salón Dulce Aventura</h5>
                                     <p class="card-text mb-4">La Falda, Córdoba<br>San Martín 2340<br>Capacidad: 40</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -419,8 +417,8 @@
                         <!-- La Jungla Divertida -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones infantiles/junglaDivertida.png" class="img-fluid object-fit-cover" alt="Salón Jardín Secreto" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones infantiles/junglaDivertida.png" class="imgSalon card-img-top" alt="Salón Jardín Secreto">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Infantil">
                                     <h5 class="card-title">Salón La Jungla Divertida</h5>
                                     <p class="card-text mb-4">Guaymallen, Mendoza<br>Monte Caseros 1203<br>Capacidad: 50</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -434,8 +432,8 @@
                         <!-- Pequeños Sueños -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones infantiles/peqSuenos.png" class="img-fluid object-fit-cover" alt="Salón Refugio Chill" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones infantiles/peqSuenos.png" class="imgSalon card-img-top" alt="Salón Refugio Chill">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Infantil">
                                     <h5 class="card-title">Salón Pequeños Sueños</h5>
                                     <p class="card-text mb-4">Puerto Madryn, Chubut<br>Buenos Aires 988<br>Capacidad: 55</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -449,8 +447,8 @@
                         <!-- Estrellitas -->
                         <div class="col">
                             <div class="card h-100 shadow rounded-4 overflow-hidden d-flex flex-column">
-                                <img src="../img/salones infantiles/estrellitas.png" class="img-fluid object-fit-cover" alt="Salón Tierra Cálida" style="height: 200px;">
-                                <div class="card-body d-flex flex-column flex-grow-1 p-4">
+                                <img src="../img/salones infantiles/estrellitas.png" class="imgSalon card-img-top" alt="Salón Tierra Cálida">
+                                <div class="card-salon card-body d-flex flex-column flex-grow-1 p-4" data-tipo="Infantil">
                                     <h5 class="card-title">Salón Estrellitas</h5>
                                     <p class="card-text mb-4">Bahía Blanca, Buenos Aires<br>Av. Ramírez 3120<br>Capacidad: 60</p>
                                     <div class="mt-auto d-flex gap-2">
@@ -462,7 +460,7 @@
                         </div>
 
                     </div>
-                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center" style="height: 4rem;">Agregar Nuevo Salón</a>
+                    <a href="nuevoSalon.html" class="btn btn-outline-primary w-50 mt-5 fs-4 text-decoration-none text-center d-flex justify-content-center align-items-center h-75 p-2">Agregar Nuevo Salón</a>
                 </div>
             </section>
 
@@ -475,7 +473,7 @@
                     <!-- Logo -->
                     <div class="col-md-4 text-center text-md-start">
                         <div class="logo-footer">
-                        <img src="../img/logo-completo.svg" class="img-fluid" style="max-width: 300px;">
+                        <img src="../img/logo-completo.svg" class="img-fluid mw-25">
                         </div>
                     </div>
 

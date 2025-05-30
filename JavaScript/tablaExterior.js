@@ -15,10 +15,12 @@ function mostrarTablaSalones() {
   thead.innerHTML = `
     <tr>
       <th>Nombre</th>
+      <th>Tipo</th>
       <th>Capacidad</th>
       <th>Dirección</th>
       <th>Precio</th>
-      <th>Temática</th>
+      <th>Descripción</th>
+      <th>Acciónes</th>
     </tr>
   `;
   tabla.appendChild(thead);
@@ -31,10 +33,12 @@ function mostrarTablaSalones() {
     const fila = document.createElement("tr");
     fila.innerHTML = `
       <td>${salon.nombre}</td>
+      <td>${salon.tipo}</td>
       <td>${salon.capacidad}</td>
       <td>${salon.direccion}</td>
       <td>$${salon.precio.toLocaleString()}</td>
-      <td>${salon.tematica}</td>
+      <td>${salon.descripcion}</td>
+      
     `;
     tbody.appendChild(fila);
   });
@@ -42,12 +46,12 @@ function mostrarTablaSalones() {
   tabla.appendChild(tbody);
 
   // Insertar tabla en el div destino
-  const contenedor = document.getElementById("tablaSalonesExterior");
+  const contenedor = document.getElementById("tablaSalones");
   if (contenedor) {
     contenedor.innerHTML = ""; // Limpiar contenido previo
     contenedor.appendChild(tabla);
   } else {
-    console.warn('No se encontró el contenedor con id "tablaSalonesExterior"');
+    console.warn('No se encontró el contenedor con id "tablaSalones"');
   }
 }
 
