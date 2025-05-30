@@ -1,11 +1,17 @@
-function inicializarLocalStorage() {
+export function inicializarLocalStorage() {
   if (!localStorage.getItem("salones")) {
     var salones = [
-      { id: 1, nombre: "Salón Encanto", capacidad: 120, direccion: "Av. Sarmiento 1123", precio: 25000 },
-      { id: 2, nombre: "Salón Estrellas", capacidad: 180, direccion: "Belgrano 456", precio: 30000 },
-      { id: 3, nombre: "Salón Jardín", capacidad: 100, direccion: "Mitre 879", precio: 27000 },
-      { id: 4, nombre: "Salón Aires", capacidad: 90, direccion: "Güemes 1330", precio: 24000 },
-      { id: 5, nombre: "Salón Brisas", capacidad: 130, direccion: "Bolívar 742", precio: 28000 }
+      { id: 1, nombre: "Salón Encanto", capacidad: 120, direccion: "Av. Sarmiento 1123", precio: 25000, descripcion: "Un salón versátil con un toque de elegancia y calidez. Ideal para celebraciones sociales, cuenta con un ambiente cómodo y detalles encantadores que se adaptan a distintos estilos de eventos. Perfecto para quienes buscan un espacio con personalidad.", tematica: "interior", imagen: "../img/salones%20interior/salonEncanto.png" },
+      { id: 2, nombre: "Salón Estrellas", capacidad: 180, direccion: "Belgrano 456", precio: 30000, descripcion: "Amplio, moderno y luminoso, este salón está preparado para grandes eventos. Su distribución abierta permite una organización flexible, ideal para fiestas, recepciones o reuniones importantes. Un espacio donde cada detalle brilla.", tematica: "interior", imagen: "../img/salones%20interior/salonEstrellas.png" },
+      { id: 3, nombre: "Salón Jardín", capacidad: 100, direccion: "Mitre 879", precio: 27000, descripcion: "Con un diseño sobrio y acogedor, este salón combina funcionalidad y buen gusto. Perfecto para celebraciones íntimas, reuniones familiares o eventos elegantes, ofrece un entorno sereno con estilo natural y decoración adaptable.", tematica: "interior", imagen: "../img/salones%20interior/salonJardin.jpg" },
+      { id: 4, nombre: "Salón Aires", capacidad: 90, direccion: "Güemes 1330", precio: 24000, descripcion: "Ideal para encuentros cálidos y eventos privados, este salón destaca por su comodidad y estética simple pero refinada. Equipado con todo lo necesario para una celebración fluida y memorable, es la elección ideal para quienes valoran la armonía del espacio.", tematica: "interior", imagen: "../img/salones%20interior/salonAires.png" },
+      { id: 5, nombre: "Salón Brisas", capacidad: 130, direccion: "Bolívar 742", precio: 28000, descripcion: "Elegante y funcional, este salón ofrece un entorno moderno para eventos sociales, cumpleaños, despedidas o aniversarios. Con buena iluminación, climatización y espacio adaptable, es el escenario perfecto para crear momentos especiales.", tematica: "interior", imagen: "../img/salones%20interior/salonBrisas.jpg" },
+
+      { id: 6, nombre: "Salón Jungla Divertida", capacidad: 50, direccion: "Monte Caseros 1203", precio: 15000, descripcion: "Un lugar mágico con castillos inflables y disfraces para los pequeños. Incluye zona de juegos blandos.", tematica: "infantil", imagen: "../img/salones%20infantiles/junglaDivertida.png" },
+      { id: 7, nombre: "Salón Dulce Aventura", capacidad: 40, direccion: "San Martín 2340", precio: 18000, descripcion: "Parque de juegos con toboganes y laberintos. Diversión garantizada.", tematica: "infantil", imagen: "../img/salones%20infantiles/dulceAventura.png" },
+      { id: 8, nombre: "Salón Mundo Mágico", capacidad: 60, direccion: "Avenida Ramírez 1520", precio: 12000, descripcion: "Salón temático de cuentos con actividades creativas, zona de lectura y un castillo interactivo.", tematica: "infantil", imagen: "../img/salones%20infantiles/mundoMagico.png" },
+      { id: 9, nombre: "Salón Estrellitas", capacidad: 60, direccion: "Av. Ramírez 3120", precio: 22000, descripcion: "Amplio salón con escenario para espectáculos, animación profesional y opciones de menú adaptadas a niños.", tematica: "infantil", imagen: "../img/salones%20infantiles/estrellitas.png" },
+      { id: 10, nombre: "Salón Pequeños Sueños", capacidad: 55, direccion: "Buenos Aires 988", precio: 16000, descripcion: "Espacio acogedor con juegos didácticos, talleres y actividades de integración para todas las edades. Muy seguro.", tematica: "infantil", imagen: "../img/salones%20infantiles/peqSuenos.png" }
     ];
     localStorage.setItem("salones", JSON.stringify(salones));
   }
