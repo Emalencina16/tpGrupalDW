@@ -4,8 +4,7 @@ function mostrarTablaSalonesExterior() {
   // Recuperar datos desde localStorage
   const salones = JSON.parse(localStorage.getItem("salones")) || [];
 
-  // Filtrar salones tipo "Exterior"
-  const salonesExterior = salones
+
 
   // Crear tabla
   const tabla = document.createElement("table");
@@ -30,15 +29,14 @@ function mostrarTablaSalonesExterior() {
   const tbody = document.createElement("tbody");
 
   // Agregar filas con datos
-  salonesExterior.forEach(salon => {
+  salones.forEach(salon => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
       <td>${salon.nombre}</td>
       <td>${salon.capacidad}</td>
       <td>${salon.direccion}</td>
       <td>$${salon.precio.toLocaleString()}</td>
-      <td>${salon.tipo}</td>
-    `;
+      `;
     tbody.appendChild(fila);
   });
 
