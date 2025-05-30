@@ -60,6 +60,17 @@
                     <label for="nombreSalon" class="form-label">Nombre:</label>
                     <input type="text" class="form-control" id="nombreSalon">
                 </div>
+                <div class="input-group mb-3 d-flex flex-column">
+                    <label for="tipoSalon" class="form-label">Tipo de Salón:</label>
+                    <select class="form-select w-100 rounded" id="tipoSalon">
+                        <option selected>Seleccionar tipo</option>
+                        <option value="Interior">Interior</option>
+                        <option value="Exterior">Exterior</option>
+                        <option value="Infantil">Infantil</option>
+                        <option value="Terraza">Terraza</option>
+                        <option value="Pileta">Pileta</option>
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="capacidadSalon" class="form-label">Capacidad:</label>
                     <input type="number" class="form-control" id="capacidadSalon">
@@ -68,9 +79,16 @@
                     <label for="direccionSalon" class="form-label">Dirección:</label>
                     <input type="text" class="form-control" id="direccionSalon">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 d-flex flex-column">
                     <label for="precioSalon" class="form-label">Precio:</label>
-                    <input type="text" class="form-control" id="precioSalon">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="precioSalon">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="descripcionSalon" class="form-label">Descripción:</label>
+                    <textarea class="form-control" aria-label="With textarea" id="descripcionSalon"></textarea>
                 </div>
                 <button type="submit" class="btn-agregarSalon btn btn-primary ">Agregar Salón</button>
             </form>
@@ -78,9 +96,9 @@
 
 <!-- tabla-->
         <div class="container mt-5">
-    <h2 class="mb-4">Lista de Salones</h2>
-    <div id="tablaSalonesExterior"></div>
-  </div>
+            <h2 class="mb-4 text-primary">Lista de Salones</h2>
+            <div id="tablaSalones"></div>
+        </div>
 
 
         <footer class="bg-white text-primary py-5 border-top">

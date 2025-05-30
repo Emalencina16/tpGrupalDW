@@ -4,33 +4,40 @@ document.addEventListener("DOMContentLoaded", function () {
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var nombre = document.getElementById("nombreSalon").value.trim();
-    var capacidad = parseInt(document.getElementById("capacidadSalon").value);
-    var direccion = document.getElementById("direccionSalon").value.trim();
-    var precio = parseFloat(document.getElementById("precioSalon").value);
+    let nombre = document.getElementById("nombreSalon").value.trim();
+    let tipo = document.getElementById("tipoSalon").value.trim();
+    let capacidad = parseInt(document.getElementById("capacidadSalon").value);
+    let direccion = document.getElementById("direccionSalon").value.trim();
+    let precio = parseFloat(document.getElementById("precioSalon").value);
+    let descripcion = document.getElementById("descripcionSalon").value.trim();
 
-    var tematica = document.getElementById("tematicaSalon").value.trim();
-    var descripcion = document.getElementById("descripcionSalon").value.trim();
-    var imagen = document.getElementById("imagenSalon").value.trim();
-
-    if (nombre === "" || isNaN(capacidad) || direccion === "" || isNaN(precio)) {
+    if (nombre === "" || tipo === ""|| isNaN(capacidad) || direccion === "" || isNaN(precio) || descripcion === "") {
       alert("Completá todos los campos correctamente.");
       return;
     }
 
-    var nuevoSalon = {
-      id: Date.now(),
+    
+
+    let salonesGuardados = localStorage.getItem("salones");
+    let salones = salonesGuardados ? JSON.parse(salonesGuardados) : [];
+
+    let ultimoId = 0;
+    salones.forEach(function (salon) {
+      if (salon.id > ultimoId) {
+        ultimoId = salon.id;
+      }
+    });
+
+    let nuevoSalon = {
+      id: ultimoId + 1,
       nombre: nombre,
+      tipo: tipo,
       capacidad: capacidad,
       direccion: direccion,
       precio: precio,
-      descripcion: descripcion,
-      tematica: tematica,
-      imagen: imagen
+      descripcion: descripcion
     };
 
-    var salonesGuardados = localStorage.getItem("salones");
-    var salones = salonesGuardados ? JSON.parse(salonesGuardados) : [];
     salones.push(nuevoSalon);
     localStorage.setItem("salones", JSON.stringify(salones));
 
