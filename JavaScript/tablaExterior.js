@@ -1,10 +1,8 @@
-document.addEventListener("DOMContentLoaded", mostrarTablaSalonesExterior);
+document.addEventListener("DOMContentLoaded", mostrarTablaSalones);
 
-function mostrarTablaSalonesExterior() {
+function mostrarTablaSalones() {
   // Recuperar datos desde localStorage
   const salones = JSON.parse(localStorage.getItem("salones")) || [];
-
-
 
   // Crear tabla
   const tabla = document.createElement("table");
@@ -20,7 +18,7 @@ function mostrarTablaSalonesExterior() {
       <th>Capacidad</th>
       <th>Dirección</th>
       <th>Precio</th>
-      <th>Tematica</th>
+      <th>Temática</th>
     </tr>
   `;
   tabla.appendChild(thead);
@@ -32,15 +30,15 @@ function mostrarTablaSalonesExterior() {
   salones.forEach(salon => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
-      <td>${salones.nombre}</td>
-      <td>${salones.capacidad}</td>
-      <td>${salones.direccion}</td>
-      <td>$${salones.precio.toLocaleString()}</td>
-      `;
+      <td>${salon.nombre}</td>
+      <td>${salon.capacidad}</td>
+      <td>${salon.direccion}</td>
+      <td>$${salon.precio.toLocaleString()}</td>
+      <td>${salon.tematica}</td>
+    `;
     tbody.appendChild(fila);
   });
 
-  tabla.appendChild(thead);
   tabla.appendChild(tbody);
 
   // Insertar tabla en el div destino
@@ -48,5 +46,9 @@ function mostrarTablaSalonesExterior() {
   if (contenedor) {
     contenedor.innerHTML = ""; // Limpiar contenido previo
     contenedor.appendChild(tabla);
+  } else {
+    console.warn('No se encontró el contenedor con id "tablaSalonesExterior"');
   }
 }
+
+
