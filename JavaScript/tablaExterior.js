@@ -32,10 +32,10 @@ function mostrarTablaSalonesExterior() {
   salones.forEach(salon => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
-      <td>${salon.nombre}</td>
-      <td>${salon.capacidad}</td>
-      <td>${salon.direccion}</td>
-      <td>$${salon.precio.toLocaleString()}</td>
+      <td>${salones.nombre}</td>
+      <td>${salones.capacidad}</td>
+      <td>${salones.direccion}</td>
+      <td>$${salones.precio.toLocaleString()}</td>
       `;
     tbody.appendChild(fila);
   });
