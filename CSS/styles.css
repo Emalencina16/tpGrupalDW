@@ -265,3 +265,31 @@ figcaption strong {
 .politicas a:hover {
     text-decoration: underline;
 }
+
+
+.card-salon {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.card-salon img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-salon h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+}
+
+.card-salon p {
+  margin: 4px 0;
+  font-size: 0.9em;
+  color: #333;
+}
