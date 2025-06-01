@@ -267,29 +267,29 @@ figcaption strong {
 }
 
 
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.contenedor-salones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .card-salon {
+  background: white;
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 200px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
+  border-radius: 12px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .card-salon img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
-}
-
-.card-salon h3 {
-  margin: 10px 0 5px 0;
-  font-size: 1.2em;
-}
-
-.card-salon p {
-  margin: 4px 0;
-  font-size: 0.9em;
-  color: #333;
+  border-radius: 8px;
 }
