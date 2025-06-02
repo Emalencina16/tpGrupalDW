@@ -22,6 +22,8 @@ function mostrarSalones(tipoFiltro) {
       <div class="botones">
         <a href="detallesSalon.html?id=${salon.id}" class="btn btn-primary flex-grow-1">Ver detalle</a>
         <a href="#" class="btn btn-primary flex-grow-1">Reservar</a>
+        <a href="editarSalon.html?id=${salon.id}" class="btn btn-warning flex-grow-1">Editar</a>
+
       </div>
     `;
 
