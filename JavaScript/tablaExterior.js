@@ -38,7 +38,9 @@ function mostrarTablaSalones() {
       <td>${salon.direccion}</td>
       <td>$${salon.precio.toLocaleString()}</td>
       <td>${salon.descripcion}</td>
-      
+      <td>
+        <button class="btn btn-warning btn-sm" onclick="irAEditar(${salon.id})">Editar</button>
+      </td>
     `;
     tbody.appendChild(fila);
   });
@@ -53,6 +55,7 @@ function mostrarTablaSalones() {
   } else {
     console.warn('No se encontró el contenedor con id "tablaSalones"');
   }
+
 }
 
 

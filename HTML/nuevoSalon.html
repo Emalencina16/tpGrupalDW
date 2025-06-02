@@ -93,11 +93,113 @@
             </form>
         </section>
 
-<!-- tabla-->
+        <!-- tabla-->
         <div class="container mt-5">
             <h2 class="mb-4 text-primary">Lista de Salones</h2>
             <div id="tablaSalones"></div>
         </div>
+
+        <script>
+            // Función que carga los salones del localStorage y genera la tabla con botón Editar
+            function cargarTabla() {
+            const salones = JSON.parse(localStorage.getItem("salones")) || [];
+
+            let tablaHTML = `
+                <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th>Nombre</th><th>Tipo</th><th>Capacidad</th><th>Dirección</th><th>Precio</th><th>Descripción</th><th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            salones.forEach(salon => {
+                tablaHTML += `
+                <tr>
+                    <td>${salon.nombre}</td>
+                    <td>${salon.tipo}</td>
+                    <td>${salon.capacidad}</td>
+                    <td>${salon.direccion}</td>
+                    <td>$${salon.precio.toLocaleString()}</td>
+                    <td>${salon.descripcion}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editarSalon(${salon.id})">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">Eliminar</button>
+                    </td>
+                    
+                </tr>
+                `;
+            });
+
+            tablaHTML += "</tbody></table>";
+
+            document.getElementById("tablaSalones").innerHTML = tablaHTML;
+            }
+
+            function eliminarSalon(id) {
+                if (confirm("¿Estás seguro de que querés eliminar este salón?")) {
+                    const salones = JSON.parse(localStorage.getItem("salones")) || [];
+                    const nuevosSalones = salones.filter(salon => salon.id !== id);
+                    localStorage.setItem("salones", JSON.stringify(nuevosSalones));
+                    cargarTabla(); // Actualiza la tabla automáticamente
+                }
+            }
+
+
+            // Función que redirige a editarSalon.html pasando el id por query string
+            function editarSalon(id) {
+            window.location.href = `editarSalon.html?id=${id}`;
+            }
+
+            // Al cargar la página, muestro la tabla
+            window.onload = function () {
+            cargarTabla();
+            };
+        </script>
+
+        <script>
+            document.getElementById("formSalon").addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita el refresh
+
+                const nombre = document.getElementById("nombreSalon").value.trim();
+                const tipo = document.getElementById("tipoSalon").value;
+                const capacidad = parseInt(document.getElementById("capacidadSalon").value);
+                const direccion = document.getElementById("direccionSalon").value.trim();
+                const precio = parseFloat(document.getElementById("precioSalon").value);
+                const descripcion = document.getElementById("descripcionSalon").value.trim();
+
+                // Validación básica
+                if (!nombre || tipo === "Seleccionar tipo" || !capacidad || !direccion || !precio || !descripcion) {
+                alert("Por favor completá todos los campos correctamente.");
+                return;
+                }
+
+                const salones = JSON.parse(localStorage.getItem("salones")) || [];
+
+                const nuevoSalon = {
+                id: Date.now(), // ID único
+                nombre,
+                tipo,
+                capacidad,
+                direccion,
+                precio,
+                descripcion
+                };
+
+                salones.push(nuevoSalon);
+                localStorage.setItem("salones", JSON.stringify(salones));
+
+                // Limpiar el formulario
+                document.getElementById("formSalon").reset();
+
+                // ✅ Actualizar la tabla automáticamente
+                cargarTabla();
+
+                // Opcional: mensaje visual
+                alert("¡Salón agregado correctamente!");
+            });
+        </script>
 
 
         <footer class="bg-white text-primary py-5 border-top">

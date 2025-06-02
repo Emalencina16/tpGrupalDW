@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    
-
     let salonesGuardados = localStorage.getItem("salones");
     let salones = salonesGuardados ? JSON.parse(salonesGuardados) : [];
 
