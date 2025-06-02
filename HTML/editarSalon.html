@@ -52,7 +52,7 @@
                 </div>
             </header>
         </main>
-        <div class="container mt-5">
+        <div class="container my-5">
             <h2>Editar Salón</h2>
             <form id="formEditarSalon">
             <input type="hidden" id="idSalon">
@@ -86,47 +86,69 @@
             </form>
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-            const idSalon = parseInt(params.get("id"));
+        <footer class="bg-white text-primary py-5 border-top">
+            <div class="container">
+                <div class="row gy-4 justify-content-between">
 
-            const salones = JSON.parse(localStorage.getItem("salones")) || [];
-            const salon = salones.find(s => s.id === idSalon);
+                    <!-- Logo -->
+                    <div class="col-md-4 text-center text-md-start">
+                        <div class="logo-footer">
+                        <img src="../img/logo-completo.svg" class="img-fluid mw-25">
+                        </div>
+                    </div>
 
-            if (!salon) {
-                alert("Salón no encontrado");
-                window.location.href = "tablaSalones.html";
-                return;
-            }
+                    <!-- Info contacto -->
+                    <div class="col-md-4">
+                        <div class="info-contacto">
+                            <p class="fw-bold mb-1">Alquiler de Salones Ambienta</p>
+                            <p class="mb-1">Calle Sarmiento 43, Buenos Aires</p>
+                            <p class="mb-1">Tel: +540022356254</p>
+                            <p class="mb-1">
+                                Email: <a href="#" class="text-primary text-decoration-none">contacto@ambientasalones.com</a>
+                            </p>
+                        </div>
+                    </div>
 
-            document.getElementById("idSalon").value = salon.id;
-            document.getElementById("nombreSalon").value = salon.nombre;
-            document.getElementById("tipoSalon").value = salon.tipo;
-            document.getElementById("capacidadSalon").value = salon.capacidad;
-            document.getElementById("direccionSalon").value = salon.direccion;
-            document.getElementById("precioSalon").value = salon.precio;
-            document.getElementById("descripcionSalon").value = salon.descripcion;
+                    <!-- Redes sociales -->
+                    <div class="col-md-3">
+                        <div class="footer-links">
+                            <h5 class="mb-2">Seguinos:</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none text-primary fs-5">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-            document.getElementById("formEditarSalon").addEventListener("submit", function (e) {
-                e.preventDefault();
+                    <!-- Políticas -->
+                    <div class="col-12 d-flex flex-column align-items-center mt-4">
+                        <div class="politicas text-center">
+                            <a href="#" class="text-primary text-decoration-none mb-1">Política de privacidad</a>
+                            <a href="#" class="text-primary text-decoration-none mb-1">Términos y condiciones</a>
+                        </div>
+                    </div>
 
-                salon.nombre = document.getElementById("nombreSalon").value.trim();
-                salon.tipo = document.getElementById("tipoSalon").value.trim();
-                salon.capacidad = parseInt(document.getElementById("capacidadSalon").value);
-                salon.direccion = document.getElementById("direccionSalon").value.trim();
-                salon.precio = parseFloat(document.getElementById("precioSalon").value);
-                salon.descripcion = document.getElementById("descripcionSalon").value.trim();
+                    <!-- Copyright -->
+                    <div class="col-12 mt-4">
+                        <p class="text-center text-muted border-top pt-3 mb-0 small">
+                            © 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-                // Reemplazar el salón editado en el array original
-                const nuevoSalones = salones.map(s => s.id === salon.id ? salon : s);
-                localStorage.setItem("salones", JSON.stringify(nuevoSalones));
-
-                alert("Salón actualizado correctamente");
-                window.location.href = "tablaSalones.html";
-            });
-            });
-        </script>
-        <script src="js/storage.js"></script>
+        <script src="../JavaScript/storage.js"></script>
+        <script src="../JavaScript/editarSalon.js"></script>
     </body>
 </html>

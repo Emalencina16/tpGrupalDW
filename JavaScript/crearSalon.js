@@ -1,17 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var formulario = document.getElementById("formSalon");
+  console.log("Script cargado ");
+  let formulario = document.getElementById("formSalon");
 
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
     let nombre = document.getElementById("nombreSalon").value.trim();
     let tipo = document.getElementById("tipoSalon").value.trim();
-    let capacidad = parseInt(document.getElementById("capacidadSalon").value);
+    let capacidad = parseInt(document.getElementById("capacidadSalon").value.trim());
     let direccion = document.getElementById("direccionSalon").value.trim();
-    let precio = parseFloat(document.getElementById("precioSalon").value);
+    let precio = parseFloat(document.getElementById("precioSalon").value.trim());
     let descripcion = document.getElementById("descripcionSalon").value.trim();
 
-    if (nombre === "" || tipo === ""|| isNaN(capacidad) || direccion === "" || isNaN(precio) || descripcion === "") {
+    if (nombre === "" ||
+       tipo === ""||
+        isNaN(parseInt(capacidad)) || 
+        direccion === "" || 
+        isNaN(parseInt(precio)) || 
+        descripcion === "") {
       alert("Completá todos los campos correctamente.");
       return;
     }
@@ -30,10 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
       id: ultimoId + 1,
       nombre: nombre,
       tipo: tipo,
-      capacidad: capacidad,
+      capacidad: parseInt(capacidad),
       direccion: direccion,
-      precio: precio,
-      descripcion: descripcion
+      precio: parseInt(precio),
+      descripcion: descripcion,
+      imagen: `../img/default.jpg` // Asignar una imagen basada en el nombre y tipo
     };
 
     salones.push(nuevoSalon);
@@ -41,5 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     alert("Salón guardado correctamente.");
     formulario.reset();
+
+    mostrarTablaSalones();
   });
 });

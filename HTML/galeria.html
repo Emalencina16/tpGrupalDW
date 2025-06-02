@@ -59,22 +59,29 @@
                             
 
         </main>
-    <h1>Salones disponibles</h1>
-  
+        <section class="salones d-flex justify-content-center align-items-center flex-column">
+            <h1 class="text-primary text-center my-3">Salones disponibles</h1>
+        
+            <div class="filtro d-flex flex-wrap justify-content-center align-items-center gap-3 w-100 px-3 mb-4">
+                <label for="tipo-salon" class="fs-5 text-center">Filtrar por tipo:</label>
+                
+                <select id="tipo-salon" class="form-select w-50 min-w-50 fs-5">
+                    <option value="todos">Todos</option>
+                    <option value="Interior">Interior</option>
+                    <option value="Infantil">Infantil</option>
+                    <option value="Exterior">Exterior</option>
+                    <option value="Exterior">Pileta</option>
+                    <option value="Exterior">Terraza</option>
+                </select>
 
-  <label for="tipo-salon">Filtrar por tipo:</label>
-  <select id="tipo-salon">
-    <option value="todos">Todos</option>
-    <option value="Interior">Interior</option>
-    <option value="Infantil">Infantil</option>
-    <option value="Exterior">Exterior</option>
-  </select>
+                <button id="btn-eliminar-modo" class="btn btn-danger fs-6">Eliminar Salones</button>
+            </div>
+        
+            <div id="contenedor-salones" class="row justify-content-around gap-3 h-25 m-2"></div>
+            
+        </section>
 
-
-  <div id="contenedor-salones" class="contenedor-salones"></div>
-  
-  <button id="btn-eliminar-modo" class="btn btn-danger my-3">Eliminar Salones</button>   
-  <footer class="bg-white text-primary py-5 border-top">
+        <footer class="bg-white text-primary py-5 border-top">
             <div class="container">
                 <div class="row gy-4 justify-content-between">
 
