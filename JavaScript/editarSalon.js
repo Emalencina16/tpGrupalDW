@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const salon = salones[salonIndex];
 
-  // Rellenar el formulario con los datos
+  // Rellena el formulario con los datos
   document.getElementById("idSalon").value = salon.id;
   document.getElementById("nombreSalon").value = salon.nombre;
   document.getElementById("tipoSalon").value = salon.tipo;
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("precioSalon").value = salon.precio;
   document.getElementById("descripcionSalon").value = salon.descripcion;
 
-  // Guardar cambios
+  // Guarda cambios
   document.getElementById("formEditarSalon").addEventListener("submit", function (e) {
     e.preventDefault();
 
