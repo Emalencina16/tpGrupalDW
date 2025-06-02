@@ -360,3 +360,35 @@ h1 {
   background-color: #dc3545;
   color: white;
 }
+
+label[for="tipo-salon"] {
+  color: white;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+#tipo-salon {
+  background-color: #072874; 
+  color: white;
+  border: 1px solid #072874;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+#tipo-salon:hover,
+#tipo-salon:focus {
+  border-color: #3365cf; 
+  background-color: #0055aa;
+  outline: none;
+}
+
+#tipo-salon option {
+  background-color: #072874;
+  color: white;
+}
