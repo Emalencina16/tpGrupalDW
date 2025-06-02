@@ -1,0 +1,394 @@
+/* Variables grales */
+:root{
+  --color-texto-azul: #003366; 
+  --color-texto-grisOscuro: #333;
+
+  --color-fondo-claro: #f4f4f4;
+
+  --margin-b-40: 2.5rem;
+}
+
+/* ------ ESTILOS GENERALES ------ */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos del header */
+
+.logo {
+  font-weight: 800;
+  color: var(--color-texto-azul);
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.btn-reserva {
+  transition: background-color 0.3s;
+}
+
+.btn-reserva:hover {
+  background-color: #0056b3 !important;
+  color: #fff !important;
+}
+
+.contacto .telefono:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del Index */
+/* Sección del banner */
+.banner-unico {
+  height: 100vh;
+  background-image: url('../img/inicio/Banner.png') ; /* tu imagen */
+  background-size: cover;
+  background-position: center;
+
+  animation: revelarBanner 1.5s ease-out forwards;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Animación de entrada desde abajo */
+@keyframes revelarBanner {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banner-contenido {
+  background: #2948918e;
+}
+
+.titulo_banner {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subtitulo_banner {
+  color: #dbd8d8 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+.btn-explora, .btn-reservaInicio{
+  height: 3.5rem;
+}
+
+.carusel-inicio{
+  width:21.8rem;
+  height: 14.3rem;
+}
+
+.inicio_salones_btn{
+  background-color: var(--color-texto-azul) !important;
+}
+
+.reserva_subtitulo, .reserva_titulo{
+  color: var(--color-texto-azul);
+}
+
+.btn-disponibilidad{
+  background-color: var(--color-texto-azul) !important;
+
+}
+  
+/* ------ ESTILOS PAGINA CONTACTO ------ */
+
+.contacto_titulo, .contacto_subtitulo{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contacto_formulario{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contacto_cierreInfo{
+  font-family: 'Times New Roman', Times, serif;
+  background-color:#499ffa;
+}
+
+/* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
+
+.banner_sobreNosotros {
+    height: 120px; 
+    text-shadow: 3px 3px #000;
+}
+
+.banner_sobreNosotros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/institucional/banner-sobreNosotros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.banner_sobreNosotros > * {
+    position: relative;
+    z-index: 1;
+}
+
+.primerSeccion_sobreNosotros {
+    background-color: var(--color-fondo-claro);
+    max-width: 1200px;
+    padding: 5rem 2rem;
+}
+
+.primerSeccion_sobreNosotros p {
+    flex: 1;
+}
+
+/*segunda seccion*/
+
+.segundaSeccion_sobreNosotros {
+    background-color: #f9f9f9;    
+    color: var(--color-texto-grisOscuro);                  
+}
+
+.segundaSeccion_titulo {
+    color: var(--color-texto-azul);            
+}
+
+ul {
+    list-style: none;            
+}
+
+ul li::before {
+   
+    font-size: 1.5rem;            
+    color: var(--color-texto-azul);              
+    position: absolute;           
+    left: 0;                      
+    top: 50%;                     
+    transform: translateY(-50%);  
+}
+
+ul {
+    list-style-type: none; 
+}
+
+/*tercer seccion*/
+
+.tercerSeccion_sobreNosotros {
+    padding: 3.75rem 1.25rem;              
+    background-color: var(--color-fondo-claro);       
+    color: var(--color-texto-grisOscuro);                     
+}
+
+.tercerSeccion_titulos {
+    margin-bottom: var(--margin-b-40);             
+}
+
+.tercerSeccion_titulos h2 {
+    color: var(--color-texto-azul);                  
+}
+
+figcaption {
+    color: var(--color-texto-grisOscuro);                  
+}
+
+figcaption strong {
+    color: var(--color-texto-azul);                 
+}
+
+/* cuarta seccion*/
+
+.cuartaSeccion_sobreNosotros {
+    padding: 3.75rem 1.25rem;
+    color: var(--color-texto-grisOscuro);
+}
+
+.cuartaSeccion_titulos {
+    margin-bottom: var(--margin-b-40);
+}
+
+.cuartaSeccion_titulos h2 {
+    color: var(--color-texto-azul);
+}
+
+.nombre_empleados {
+    color: var(--color-texto-azul);
+}
+
+.puesto_empleados {
+    color: #444;
+}
+
+.descripcion_roles {
+    color: #555;
+}
+
+/* ESTILOS GALERIA SALONES */
+.imgSalon{
+  height: 13rem;
+}
+
+/* ESTILOS DETALLE SALON */
+#detalleImagenSalon {
+    max-height: 18.7rem;
+}
+
+/* ------- Estilos para Nuevo Salon----------- */
+.btn-agregarSalon{
+  background-color: var(--color-texto-azul) !important;
+}
+
+
+/* ------- Extras para el footer ----------- */
+
+.logo-footer img {
+    max-width: 300px;
+}
+
+.footer-links a i {
+    color: #0055aa;
+    transition: color 0.3s;
+}
+
+.footer-links a i:hover {
+    color: #001f4d;
+}
+
+.politicas a:hover {
+    text-decoration: underline;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#tipo-salon {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.contenedor-salones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-salon {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-salon img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.card-salon h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+}
+
+.card-salon p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  flex-grow: 0;
+}
+
+.botones {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-align: center;
+  flex-grow: 1;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.btn-eliminar-salon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-eliminar-salon:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+label[for="tipo-salon"] {
+  color: white;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+#tipo-salon {
+  background-color: #072874; 
+  color: white;
+  border: 1px solid #072874;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+#tipo-salon:hover,
+#tipo-salon:focus {
+  border-color: #3365cf; 
+  background-color: #0055aa;
+  outline: none;
+}
+
+#tipo-salon option {
+  background-color: #072874;
+  color: white;
+}
