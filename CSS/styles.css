@@ -268,28 +268,76 @@ figcaption strong {
 
 
 body {
-  font-family: sans-serif;
-  padding: 20px;
-  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#tipo-salon {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 5px;
+  font-size: 16px;
 }
 
 .contenedor-salones {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
 .card-salon {
   background: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 16px;
-  width: 300px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-salon img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.card-salon h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+}
+
+.card-salon p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  flex-grow: 0;
+}
+
+.botones {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-align: center;
+  flex-grow: 1;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
