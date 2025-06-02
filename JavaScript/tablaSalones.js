@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", mostrarTablaSalones);
 
 function mostrarTablaSalones() {
-  // Recuperar datos desde localStorage
   const salones = JSON.parse(localStorage.getItem("salones")) || [];
 
-  // Crear tabla
   const tabla = document.createElement("table");
   tabla.classList.add("table", "table-bordered", "table-hover");
   tabla.style.width = "100%";
 
-  // Crear encabezado
   const thead = document.createElement("thead");
   thead.classList.add("thead-dark");
   thead.innerHTML = `
@@ -20,15 +17,13 @@ function mostrarTablaSalones() {
       <th>Dirección</th>
       <th>Precio</th>
       <th>Descripción</th>
-      <th>Acciónes</th>
+      <th>Acciones</th>
     </tr>
   `;
   tabla.appendChild(thead);
 
-  // Crear cuerpo
   const tbody = document.createElement("tbody");
 
-  // Agregar filas con datos
   salones.forEach(salon => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
@@ -38,8 +33,9 @@ function mostrarTablaSalones() {
       <td>${salon.direccion}</td>
       <td>$${salon.precio.toLocaleString()}</td>
       <td>${salon.descripcion}</td>
-      <td>
-        <button class="btn btn-warning btn-sm" onclick="irAEditar(${salon.id})">Editar</button>
+      <td class="d-flex justify-content-center align-items-center mt-2">
+        <a href="editarSalon.html?id=${salon.id}" class="btn btn-success btn-sm me-1">Editar</a>
+        <button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">Eliminar</button>
       </td>
     `;
     tbody.appendChild(fila);
@@ -47,7 +43,6 @@ function mostrarTablaSalones() {
 
   tabla.appendChild(tbody);
 
-  // Insertar tabla en el div destino
   const contenedor = document.getElementById("tablaSalones");
   if (contenedor) {
     contenedor.innerHTML = ""; // Limpiar contenido previo
@@ -55,7 +50,13 @@ function mostrarTablaSalones() {
   } else {
     console.warn('No se encontró el contenedor con id "tablaSalones"');
   }
-
 }
 
-
+function eliminarSalon(id) {
+  if (confirm("¿Estás seguro de que querés eliminar este salón?")) {
+    let salones = JSON.parse(localStorage.getItem("salones")) || [];
+    salones = salones.filter(salon => salon.id !== id);
+    localStorage.setItem("salones", JSON.stringify(salones));
+    mostrarTablaSalones(); // Recargar la tabla
+  }
+}

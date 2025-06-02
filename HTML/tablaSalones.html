@@ -58,57 +58,7 @@
             <div id="tablaSalones"></div>
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            const salones = JSON.parse(localStorage.getItem("salones")) || [];
-
-            const tabla = document.createElement("table");
-            tabla.classList.add("table", "table-bordered");
-            const thead = `
-                <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Tipo</th>
-                    <th>Capacidad</th>
-                    <th>Dirección</th>
-                    <th>Precio</th>
-                    <th>Descripción</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>`;
-            tabla.innerHTML = thead;
-            const tbody = document.createElement("tbody");
-
-            salones.forEach(salon => {
-                const fila = document.createElement("tr");
-                fila.innerHTML = `
-                <td>${salon.nombre}</td>
-                <td>${salon.tipo}</td>
-                <td>${salon.capacidad}</td>
-                <td>${salon.direccion}</td>
-                <td>$${salon.precio}</td>
-                <td>${salon.descripcion}</td>
-                <td>
-                    <a href="editarSalon.html?id=${salon.id}" class="btn btn-primary btn-sm">Editar</a>
-                    <button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">Eliminar</button>
-                </td>
-                `;
-                tbody.appendChild(fila);
-            });
-
-            tabla.appendChild(tbody);
-            document.getElementById("tablaSalones").appendChild(tabla);
-            });
-
-        function eliminarSalon(id) {
-            if (confirm("¿Estás seguro de que querés eliminar este salón?")) {
-                const salones = JSON.parse(localStorage.getItem("salones")) || [];
-                const nuevosSalones = salones.filter(salon => salon.id !== id);
-                localStorage.setItem("salones", JSON.stringify(nuevosSalones));
-                location.reload(); // Recarga la tabla visualmente
-            }
-        }
-        </script>
-        <script src="js/storage.js"></script> 
+        <script src="../JavaScript/storage.js"></script> 
+        <script src="../JavaScript/tablaSalones.js" ></script>
     </body>
 </html>

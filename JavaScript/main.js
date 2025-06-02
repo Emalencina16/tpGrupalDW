@@ -15,27 +15,29 @@ function mostrarSalones(tipoFiltro) {
   }
 
   lista.forEach(salon => {
-    const card = document.createElement("div");
-    card.classList.add("card-salon");
-    card.style.position = "relative";
+    const col = document.createElement("div");
+    col.className = "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center";
 
-    // Contenido principal
+    const card = document.createElement("div");
+    card.classList.add("card-galeria", "card", "h-auto", "position-relative", "shadow","border-none", "p-0", "my-3", "flex-grow-2");
+    card.style.width = "20rem";
+
     card.innerHTML = `
-      <img src="${salon.imagen}" alt="${salon.nombre}" />
-      <h3>${salon.nombre}</h3>
-      <p><strong>Tipo:</strong> ${salon.tipo}</p>
-      <p><strong>Capacidad:</strong> ${salon.capacidad} personas</p>
-      <p><strong>Dirección:</strong> ${salon.direccion}</p>
-      <p><strong>Precio:</strong> $${salon.precio.toLocaleString()}</p>
-      <p>${salon.descripcion}</p>
-      <div class="botones">
-        <a href="detallesSalon.html?id=${salon.id}" class="btn btn-primary flex-grow-1">Ver detalle</a>
-        <a href="#" class="btn btn-primary flex-grow-1">Reservar</a>
-        <a href="editarSalon.html?id=${salon.id}" class="btn btn-warning flex-grow-1">Editar</a>
+      <img src="${salon.imagen || '../img/default.jpg'}" class="card-img-top w-100 object-fit-cover" style="height:13rem;" alt="${salon.nombre}"/>
+      <div class="card-body d-flex flex-column">
+        <h3 class="card-title text-primary text-center">${salon.nombre}</h3>
+        <p class="card-text my-1"><strong class="fw-semibold">Tipo:</strong> ${salon.tipo}</p>
+        <p class="card-text my-1"><strong class="fw-semibold">Capacidad:</strong> ${salon.capacidad} personas</p>
+        <p class="card-text my-1"><strong class="fw-semibold">Dirección:</strong> ${salon.direccion}</p>
+        <p class="card-text my-1"><strong class="fw-semibold">Precio:</strong> $${salon.precio.toLocaleString()}</p>
+        <div class="botones mt-3 text-center d-flex justify-content-around">
+          <a href="detallesSalon.html?id=${salon.id}" class="btn btn-info text-white flex-grow-1 w-25 me-2">Ver detalle</a>
+          <a href="#" class="btn btn-primary flex-grow-1 w-25">Reservar</a>
+        </div>
       </div>
     `;
 
-    // Botón eliminar
+    // Funcion eliminar en galeria
     if (modoEliminarActivo) {
       const btnX = document.createElement("button");
       btnX.innerHTML = "x";
@@ -66,10 +68,8 @@ function eliminarSalonPorId(id) {
 document.addEventListener("DOMContentLoaded", () => {
   const selectTipo = document.getElementById("tipo-salon");
 
-  // Mostrar todos los salones al cargar
   mostrarSalones(selectTipo.value);
 
-  // Cambiar filtro al seleccionar tipo
   selectTipo.addEventListener("change", () => {
     mostrarSalones(selectTipo.value);
   });
