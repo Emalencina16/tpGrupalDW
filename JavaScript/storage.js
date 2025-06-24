@@ -27,16 +27,19 @@ function inicializarLocalStorage() {
 
     ];
     localStorage.setItem("salones", JSON.stringify(salones));
+
+
+    let servicios = [
+     { id: 1, descripcion: "Catering", valor: 1000 },
+     { id: 2, descripcion: "DJ", valor: 2000 },
+     { id: 3, descripcion: "Decoración", valor: 1500 }
+      ];
+localStorage.setItem("servicios", JSON.stringify(servicios));
     
   }
 }
 
-const servicios = [
-  { id: 1, nombre: "Catering", precio: 1000 },
-  { id: 2, nombre: "DJ", precio: 2000 },
-  { id: 3, nombre: "Decoración", precio: 1500 }
-];
-localStorage.setItem("servicios", JSON.stringify(servicios));
+
 
 inicializarLocalStorage();
 
