@@ -31,7 +31,11 @@ function inicializarLocalStorage() {
 
   if (!localStorage.getItem("servicios")) {
     let servicios = [
-      { id: 1, descripcion: "DJ", valor: 20000 }
+      { id: 1, descripcion: "DJ", valor: 150000 },
+      { id: 2, descripcion: "Decoracion", valor: 70000 },
+      { id: 3, descripcion: "Vajilla", valor: 30000 },
+      { id: 4, descripcion: "Barra de tragos", valor: 100000 }
+
     ];
     localStorage.setItem("servicios", JSON.stringify(servicios));
     
