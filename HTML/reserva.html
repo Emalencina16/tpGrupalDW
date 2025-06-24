@@ -49,40 +49,32 @@
   </header>
 
 
-<h1>Formulario de Presupuesto</h1>
+    <div class="container">
+        <h1>Formulario de Reserva</h1>
+        <form id="formularioReserva">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
 
-  <form id="formPresupuesto">
-    <div>
-      <label>Nombre:</label><br>
-      <input type="text" id="nombre">
-    </div>
-    <div>
-      <label>Fecha:</label><br>
-      <input type="date" id="fecha">
-    </div>
-    <div>
-      <label>Temática:</label><br>
-      <input type="text" id="tematica">
-    </div>
-    <div>
-      <label>Salón:</label><br>
-      <span id="salonSeleccionado"></span>
-    </div>
-    <div>
-      <h3>Servicios:</h3>
-      <div id="serviciosContainer"></div>
-    </div>
+            <label for="fecha">Fecha del Evento:</label>
+            <input type="date" id="fecha" required>
 
-    <div>
-      <h3>Total: $<span id="total">0</span></h3>
+            <label for="tematica">Temática:</label>
+            <input type="text" id="tematica" required>
+
+            <label for="salon">Seleccione el salón:</label>
+            <select id="salon" required></select>
+
+            <fieldset>
+                <legend>Servicios:</legend>
+                <div id="servicios"></div>
+            </fieldset>
+
+            <h3>Total: $<span id="total">0</span></h3>
+            <button type="submit">Calcular y Reservar</button>
+        </form>
     </div>
 
-    <div class="error" id="errorMsg"></div>
-
-    <button type="submit">Generar Presupuesto</button>
-  </form>
-
-  <script src="presupuesto.js"></script>
+    
 
 
   <footer class="bg-white text-primary py-5 border-top">
@@ -128,7 +120,8 @@
       </div>
     </div>
   </footer>
-
+  <script src="../JavaScript/storage.js"></script>
+  <script src="../JavaScript/presupuesto.js"></script>
   <script src="../JavaScript/servicios.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
