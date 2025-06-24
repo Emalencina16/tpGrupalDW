@@ -36,7 +36,7 @@
             <a href="nuevoSalon.html" class="nav-link text-decoration-none fw-semibold text-black">Agregar salón</a>
           </li>
           <li class="nav-item">
-            <a href="galeria.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
+            <a href="reserva.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
           </li>
           <li class="nav-item">
             <div class="contacto">
@@ -49,17 +49,24 @@
   </header>
 
 
-    <div class="container">
+    <div class="container1">
         <h1>Formulario de Reserva</h1>
         <form id="formularioReserva">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
+            <input type="text" id="nombre" required />
 
             <label for="fecha">Fecha del Evento:</label>
-            <input type="date" id="fecha" required>
+            <input type="date" id="fecha" required />
 
             <label for="tematica">Temática:</label>
-            <input type="text" id="tematica" required>
+            <select id="tematica" required>
+                <option value="">-- Seleccione temática --</option>
+                <option value="Interior">Interior</option>
+                <option value="Exterior">Exterior</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Pileta">Con Pileta</option>
+                <!-- Agrega más temáticas si las tienes -->
+            </select>
 
             <label for="salon">Seleccione el salón:</label>
             <select id="salon" required></select>
@@ -70,7 +77,7 @@
             </fieldset>
 
             <h3>Total: $<span id="total">0</span></h3>
-            <button type="submit">Calcular y Reservar</button>
+            <button id="button" type="submit">Calcular y Reservar</button>
         </form>
     </div>
 

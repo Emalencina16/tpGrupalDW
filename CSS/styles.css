@@ -310,66 +310,203 @@ label[for="tipo-salon"] {
   color: white;
 }
 
-.container {
-    background-color: #fff;
-    margin-top: 40px;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 500px;
+#reserva-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-h1 {
+#reserva-titulo {
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin: 15px 0 5px;
-    color: #444;
-    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="date"],
 select {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
 }
 
-fieldset {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
+#reserva-servicios {
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
     background-color: #fafafa;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
+#total-label {
+    text-align: right;
+    margin-top: 20px;
+    color: #555555;
+}
+
+#boton-reserva {
+    background-color: #4CAF50;
     color: white;
+    padding: 12px 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#boton-reserva:hover {
+    background-color: #45a049;
 }
 
-h3 {
-    margin-top: 20px;
+#imagen-contenedor {
+    margin-top: 30px;
     text-align: center;
-    color: #555;
+}
+
+#imagenSalon {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Contenedor principal */
+.container1 {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Título */
+.container1 h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Formulario */
+#formularioReserva {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+#formularioReserva label {
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Inputs y selects */
+#formularioReserva input[type="text"],
+#formularioReserva input[type="date"],
+#formularioReserva select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+#formularioReserva input[type="text"]:focus,
+#formularioReserva input[type="date"]:focus,
+#formularioReserva select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 6px #a6d4fa;
+}
+
+/* Fieldset y legend */
+fieldset {
+  margin-top: 20px;
+  padding: 15px 12px 15px 18px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f9fc;
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 8px;
+  color: #2980b9;
+  font-size: 1.1rem;
+}
+
+/* Servicios (checkbox + label) */
+#servicios {
+  margin-top: 10px;
+}
+
+#servicios input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#servicios label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.95rem;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+
+/* Total */
+h3 {
+  margin-top: 25px;
+  text-align: right;
+  color: #27ae60;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Botón */
+#button[type="submit"] {
+  margin-top: 25px;
+  padding: 12px 0;
+  background-color: #2980b9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#button[type="submit"]:hover {
+  background-color: #1c5980;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container1 {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+ 
 }
