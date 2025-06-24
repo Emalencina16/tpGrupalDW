@@ -26,13 +26,14 @@ function inicializarLocalStorage() {
       { id: 20, nombre: "Salón El Refugio", tipo:"Pileta", capacidad: 45, direccion: "Echague 879, Paraná, Entre Ríos", precio: 15000, descripcion: "Espacio versátil con pileta exterior, zona techada y servicio de ambientación. Ideal para fiestas de cumpleaños y eventos sociales.", imagen: "../img/salones-con-piscinas/pile-1.jpeg" }
 
     ];
+    localStorage.setItem("salones", JSON.stringify(salones));
   }
 
-    if (!localStorage.getItem("servicios")) {
+  if (!localStorage.getItem("servicios")) {
     let servicios = [
       { id: 1, descripcion: "DJ", valor: 20000 }
-    ]
-    localStorage.setItem("salones", JSON.stringify(salones));
+    ];
+    localStorage.setItem("servicios", JSON.stringify(servicios));
     
   }
 }
