@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Presupuestos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../CSS/styles.css"> <link rel="icon" href="../img/logo.png">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        main {
+            padding: 20px 0;
+        }
+        h1, h2 {
+            color: #333;
+            margin-bottom: 25px; /* Más espacio debajo de los títulos */
+        }
+        /* Ajustes para la sección de sin presupuestos */
+        #mensaje-sin-presupuestos {
+            text-align: center;
+            padding: 30px;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            background-color: #e9ecef;
+            margin-bottom: 30px;
+        }
+        #mensaje-sin-presupuestos p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        #crear-primer-presupuesto {
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 5px;
+            background-color: #007bff; /* Color primario de Bootstrap */
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        #crear-primer-presupuesto:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos para el formulario de edición */
+        #editar-presupuesto-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        #editar-presupuesto-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #495057;
+        }
+        #editar-presupuesto-form input[type="text"],
+        #editar-presupuesto-form input[type="date"],
+        #editar-presupuesto-form input[type="number"],
+        #editar-presupuesto-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        }
+        #editar-presupuesto-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        #editar-presupuesto-form button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-md navbar-light bg-white py-3 px-5">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <a href="index.html" class="logo text-uppercase text-decoration-none fs-2">Ambienta</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav d-flex gap-4 list-unstyled m-0 p-0 align-items-center text-decoration-none fw-semibold text-black">
+                    <li class="nav-item">
+                        <a href="informacionInsti.html" class="nav-link text-decoration-none fw-semibold text-black">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link text-decoration-none fw-semibold text-black">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="galeria.html" class="nav-link text-decoration-none fw-semibold text-black">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nuevoSalon.html" class="nav-link text-decoration-none fw-semibold text-black">Agregar salón</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reserva.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="presupuestos.html" class="nav-link text-decoration-none fw-semibold text-black">Presupuestos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Administración de Presupuestos</h1>
+        
+        <section id="lista-presupuestos">
+            <h2 class="text-center mb-4">Listado de Presupuestos</h2>
+            
+            <div id="mensaje-sin-presupuestos" style="display: none;" class="mb-4">
+                <p>Todavía no hay presupuestos guardados.</p>
+                <button id="crear-primer-presupuesto" class="btn btn-primary">Crear nuevo presupuesto</button> 
+            </div>
+            
+            <div class="table-responsive"> <table id="tabla-presupuestos" class="table table-striped table-hover table-bordered text-center align-middle">
+                    <thead class="table-dark"> <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Temática</th>
+                            <th>Fecha</th>
+                            <th>Salón</th>
+                            <th>Servicios</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="editar-presupuesto-form" style="display: none;" class="mt-5">
+            <h2 class="text-center mb-4">Editar Presupuesto</h2>
+            <form id="form-edicion">
+                <input type="hidden" id="edit-presupuesto-id">
+                
+                <div class="mb-3">
+                    <label for="edit-nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="edit-nombre" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="edit-tematica" class="form-label">Temática:</label>
+                    <input type="text" id="edit-tematica" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="edit-fecha" class="form-label">Fecha:</label>
+                    <input type="date" id="edit-fecha" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="edit-salon-nombre" class="form-label">Salón:</label>
+                    <input type="text" id="edit-salon-nombre" class="form-control" readonly> 
+                </div>
+
+                <div class="mb-3">
+                    <label for="edit-servicios" class="form-label">Servicios (ID's separados por coma):</label>
+                    <textarea id="edit-servicios" class="form-control"></textarea> 
+                </div>
+
+                <div class="mb-4">
+                    <label for="edit-total" class="form-label">Total:</label>
+                    <input type="number" id="edit-total" step="0.01" class="form-control" readonly> 
+                </div>
+                
+                <button type="submit" class="btn btn-success me-2">Guardar Cambios</button>
+                <button type="button" id="cancelar-edicion" class="btn btn-secondary">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-white text-primary py-5 border-top">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+                <div class="col-md-4 text-center text-md-start">
+                    <div class="logo-footer">
+                        <img src="../img/logo-completo.svg" class="img-fluid mw-25" alt="Logo Ambienta">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-contacto">
+                        <p class="fw-bold mb-1">Alquiler de Salones Ambienta</p>
+                        <p class="mb-1">Calle Sarmiento 43, Buenos Aires</p>
+                        <p class="mb-1">Tel: +540022356254</p>
+                        <p class="mb-1">
+                            Email: <a href="#" class="text-primary text-decoration-none">contacto@ambientasalones.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-links">
+                        <h5 class="mb-2">Seguinos:</h5>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column align-items-center mt-4">
+                    <div class="politicas text-center">
+                        <a href="#" class="text-primary text-decoration-none mb-1 d-block">Política de privacidad</a>
+                        <a href="#" class="text-primary text-decoration-none mb-1 d-block">Términos y condiciones</a>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <p class="text-center text-muted border-top pt-3 mb-0 small">
+                        © 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <script src="../JavaScript/storage.js"></script> 
+    <script src="../JavaScript/presupuesto.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script>
+<script src="../JavaScript/tablaPresupuestos.js"></script> 
+</body>
+</html>
