@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Log In</title>
+</head>
+<body>
+  <h2>Logeate para acceder a la Tabla de Usuarios</h2>
+  <button id="btnLogin">Iniciar Sesión</button>
+
+  <script>
+    document.getElementById('btnLogin').addEventListener('click', () => {
+      fetch('https://dummyjson.com/auth/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          username: 'kminchelle',
+          password: '0lelplR'
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        sessionStorage.setItem('accessToken', data.token);
+        alert("Login exitoso. Redirigiendo...");
+        window.location.href = '/tpGrupalDW/HTML/tabla_usuarios.html';
+      })
+      .catch(err => {
+        alert("Error en el login");
+        console.error(err);
+      });
+    });
+  </script>
+</body>
+</html>
