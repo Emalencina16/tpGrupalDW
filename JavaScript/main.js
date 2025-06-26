@@ -37,6 +37,27 @@ function mostrarSalones(tipoFiltro) {
       </div>
     `;
 
+    // Botón "Reservar" de esta card
+    const btnReservar = card.querySelector('.btn.btn-primary');
+
+    btnReservar.addEventListener('click', function (e) {
+      e.preventDefault(); // Previene navegación
+
+      const token = sessionStorage.getItem("accessToken");
+
+      // Eliminar alertas anteriores si hay
+      const alertaExistente = card.querySelector('.alert');
+      if (alertaExistente) alertaExistente.remove();
+
+      if (!token) {
+        mostrarModalLogin(); // ✅ Usamos la función global reutilizable
+      } else {
+        window.location.href = "reserva.html";
+      }
+
+    });
+
+
     // Funcion eliminar en galeria
     if (modoEliminarActivo) {
       const btnX = document.createElement("button");
@@ -67,20 +88,35 @@ function eliminarSalonPorId(id) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const selectTipo = document.getElementById("tipo-salon");
+  const btnExplora = document.querySelector(".btn-explora");
+  const btnReserva = document.querySelector(".btn-reservaInicio");
+  const btnEliminarModo = document.getElementById("btn-eliminar-modo");
 
-  mostrarSalones(selectTipo.value);
-
-  selectTipo.addEventListener("change", () => {
+  if (selectTipo) {
     mostrarSalones(selectTipo.value);
-  });
+    
+    selectTipo.addEventListener("change", () => {
+      mostrarSalones(selectTipo.value);
+    });
+  }
+
+  btnExplora.addEventListener("click", function () {
+      window.location.href = "../HTML/galeria.html";
+    });
+
+  
 
   // Activar/desactivar modo eliminar
-  const btnEliminarModo = document.getElementById("btn-eliminar-modo");
-  btnEliminarModo.addEventListener("click", () => {
-    modoEliminarActivo = !modoEliminarActivo;
-    btnEliminarModo.textContent = modoEliminarActivo
-      ? "Desactivar Eliminar Salones"
-      : "Eliminar Salones";
-    mostrarSalones(selectTipo.value);
-  });
+  if (btnEliminarModo) {
+    btnEliminarModo.addEventListener("click", () => {
+      modoEliminarActivo = !modoEliminarActivo;
+      btnEliminarModo.textContent = modoEliminarActivo
+        ? "Desactivar Eliminar Salones"
+        : "Eliminar Salones";
+      if (selectTipo) {
+        mostrarSalones(selectTipo.value);
+      }
+    });
+  }
+
 });

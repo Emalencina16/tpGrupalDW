@@ -1,134 +1,128 @@
 /* Variables grales */
-:root{
-  --color-texto-azul: #003366; 
-  --color-texto-grisOscuro: #333;
+:root {
+    --color-texto-azul: #003366;
+    --color-texto-grisOscuro: #333;
 
-  --color-fondo-claro: #f4f4f4;
+    --color-fondo-claro: #f4f4f4;
 
-  --margin-b-40: 2.5rem;
+    --margin-b-40: 2.5rem;
 }
 
 /* ------ ESTILOS GENERALES ------ */
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* Estilos del header */
 
 .logo {
-  font-weight: 800;
-  color: var(--color-texto-azul);
+    font-weight: 800;
+    color: var(--color-texto-azul);
 }
 
 .navbar-nav .nav-link {
-  transition: color 0.3s;
-}
-
-.boton_usuarios{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  border-radius: 40%;
-  font-weight: bolder;
-  background-color: #e676dc;
-}
-.boton_usuarios:hover{
-  color: white;
+    transition: color 0.3s;
 }
 
 
 .navbar-nav .nav-link:hover {
-  color: #007bff;
+    color: #007bff;
 }
 
 .btn-reserva {
-  transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn-reserva:hover {
-  background-color: #0056b3 !important;
-  color: #fff !important;
+    background-color: #0056b3 !important;
+    color: #fff !important;
 }
 
 .contacto .telefono:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Estilos del Index */
 /* Sección del banner */
 .banner-unico {
-  height: 100vh;
-  background-image: url('../img/inicio/Banner.png') ; /* tu imagen */
-  background-size: cover;
-  background-position: center;
+    height: 100vh;
+    background-image: url('../img/inicio/Banner.png');
+    /* tu imagen */
+    background-size: cover;
+    background-position: center;
 
-  animation: revelarBanner 1.5s ease-out forwards;
-  transform: translateY(100%);
-  opacity: 0;
+    animation: revelarBanner 1.5s ease-out forwards;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 /* Animación de entrada desde abajo */
 @keyframes revelarBanner {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .banner-contenido {
-  background: #2948918e;
+    background: #2948918e;
 }
 
 .titulo_banner {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .subtitulo_banner {
-  color: #dbd8d8 !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #dbd8d8 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
 }
 
-.btn-explora, .btn-reservaInicio{
-  height: 3.5rem;
+.btn-explora,
+.btn-reservaInicio {
+    height: 3.5rem;
 }
 
-.carusel-inicio{
-  width:21.8rem;
-  height: 14.3rem;
+.carusel-inicio {
+    width: 21.8rem;
+    height: 14.3rem;
 }
 
-.inicio_salones_btn{
-  background-color: var(--color-texto-azul) !important;
+.inicio_salones_btn {
+    background-color: var(--color-texto-azul) !important;
 }
 
-.reserva_subtitulo, .reserva_titulo{
-  color: var(--color-texto-azul);
+.reserva_subtitulo,
+.reserva_titulo {
+    color: var(--color-texto-azul);
 }
 
-.btn-disponibilidad{
-  background-color: var(--color-texto-azul) !important;
+.btn-disponibilidad {
+    background-color: var(--color-texto-azul) !important;
 
 }
-  
+
 /* ------ ESTILOS PAGINA CONTACTO ------ */
 
-.contacto_titulo, .contacto_subtitulo{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.contacto_titulo,
+.contacto_subtitulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.contacto_formulario{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.contacto_formulario {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contacto_cierreInfo{
-  font-family: 'Times New Roman', Times, serif;
-  background-color:#499ffa;
+.contacto_cierreInfo {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #499ffa;
 }
 
 /* ------ ESTILOS PAGINA DE INFO INSTITUCIONAL ------ */
 
 .banner_sobreNosotros {
-    height: 120px; 
+    height: 120px;
     text-shadow: 3px 3px #000;
 }
 
@@ -147,7 +141,7 @@ body{
     z-index: 0;
 }
 
-.banner_sobreNosotros > * {
+.banner_sobreNosotros>* {
     position: relative;
     z-index: 1;
 }
@@ -165,54 +159,54 @@ body{
 /*segunda seccion*/
 
 .segundaSeccion_sobreNosotros {
-    background-color: #f9f9f9;    
-    color: var(--color-texto-grisOscuro);                  
+    background-color: #f9f9f9;
+    color: var(--color-texto-grisOscuro);
 }
 
 .segundaSeccion_titulo {
-    color: var(--color-texto-azul);            
+    color: var(--color-texto-azul);
 }
 
 ul {
-    list-style: none;            
+    list-style: none;
 }
 
 ul li::before {
-   
-    font-size: 1.5rem;            
-    color: var(--color-texto-azul);              
-    position: absolute;           
-    left: 0;                      
-    top: 50%;                     
-    transform: translateY(-50%);  
+
+    font-size: 1.5rem;
+    color: var(--color-texto-azul);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 ul {
-    list-style-type: none; 
+    list-style-type: none;
 }
 
 /*tercer seccion*/
 
 .tercerSeccion_sobreNosotros {
-    padding: 3.75rem 1.25rem;              
-    background-color: var(--color-fondo-claro);       
-    color: var(--color-texto-grisOscuro);                     
+    padding: 3.75rem 1.25rem;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-grisOscuro);
 }
 
 .tercerSeccion_titulos {
-    margin-bottom: var(--margin-b-40);             
+    margin-bottom: var(--margin-b-40);
 }
 
 .tercerSeccion_titulos h2 {
-    color: var(--color-texto-azul);                  
+    color: var(--color-texto-azul);
 }
 
 figcaption {
-    color: var(--color-texto-grisOscuro);                  
+    color: var(--color-texto-grisOscuro);
 }
 
 figcaption strong {
-    color: var(--color-texto-azul);                 
+    color: var(--color-texto-azul);
 }
 
 /* cuarta seccion*/
@@ -243,8 +237,8 @@ figcaption strong {
 }
 
 /* ESTILOS GALERIA SALONES */
-.imgSalon{
-  height: 13rem;
+.imgSalon {
+    height: 13rem;
 }
 
 /* ESTILOS DETALLE SALON */
@@ -253,8 +247,8 @@ figcaption strong {
 }
 
 /* ------- Estilos para Nuevo Salon----------- */
-.btn-agregarSalon{
-  background-color: var(--color-texto-azul) !important;
+.btn-agregarSalon {
+    background-color: var(--color-texto-azul) !important;
 }
 
 
@@ -280,45 +274,45 @@ figcaption strong {
 
 
 .btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 
 .btn-eliminar-salon:hover {
-  background-color: #dc3545;
-  color: white;
+    background-color: #dc3545;
+    color: white;
 }
 
 label[for="tipo-salon"] {
-  color: white;
-  font-size: 1rem;
-  margin-right: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-right: 10px;
 }
 
 #tipo-salon {
-  background-color: #072874; 
-  color: white;
-  border: 1px solid #072874;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-  transition: border 0.3s ease;
+    background-color: #072874;
+    color: white;
+    border: 1px solid #072874;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border 0.3s ease;
 }
 
 #tipo-salon:hover,
 #tipo-salon:focus {
-  border-color: #3365cf; 
-  background-color: #0055aa;
-  outline: none;
+    border-color: #3365cf;
+    background-color: #0055aa;
+    outline: none;
 }
 
 #tipo-salon option {
-  background-color: #072874;
-  color: white;
+    background-color: #072874;
+    color: white;
 }
 
 #reserva-container {
@@ -327,7 +321,7 @@ label[for="tipo-salon"] {
     margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #reserva-titulo {
@@ -392,132 +386,359 @@ select {
 #imagenSalon {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Contenedor principal */
 .container1 {
-  max-width: 450px;
-  margin: 40px auto;
-  padding: 25px 30px;
-  background-color: #fafafa;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
 /* Título */
 .container1 h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 700;
-  color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #2c3e50;
 }
 
 /* Formulario */
 #formularioReserva {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Labels */
 #formularioReserva label {
-  margin-top: 15px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 /* Inputs y selects */
 #formularioReserva input[type="text"],
 #formularioReserva input[type="date"],
 #formularioReserva select {
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 1.8px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s ease;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
 }
 
 #formularioReserva input[type="text"]:focus,
 #formularioReserva input[type="date"]:focus,
 #formularioReserva select:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 6px #a6d4fa;
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 6px #a6d4fa;
 }
 
 /* Fieldset y legend */
 fieldset {
-  margin-top: 20px;
-  padding: 15px 12px 15px 18px;
-  border: 1.5px solid #ddd;
-  border-radius: 8px;
-  background-color: #f7f9fc;
+    margin-top: 20px;
+    padding: 15px 12px 15px 18px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f9fc;
 }
 
 legend {
-  font-weight: 700;
-  padding: 0 8px;
-  color: #2980b9;
-  font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0 8px;
+    color: #2980b9;
+    font-size: 1.1rem;
 }
 
 /* Servicios (checkbox + label) */
 #servicios {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #servicios input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.2);
-  cursor: pointer;
+    margin-right: 8px;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 #servicios label {
-  cursor: pointer;
-  user-select: none;
-  font-size: 0.95rem;
-  margin-right: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.95rem;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 8px;
 }
 
 /* Total */
 h3 {
-  margin-top: 25px;
-  text-align: right;
-  color: #27ae60;
-  font-weight: 700;
-  font-size: 1.25rem;
+    margin-top: 25px;
+    text-align: right;
+    color: #27ae60;
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 /* Botón */
 #button[type="submit"] {
-  margin-top: 25px;
-  padding: 12px 0;
-  background-color: #2980b9;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    margin-top: 25px;
+    padding: 12px 0;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #button[type="submit"]:hover {
-  background-color: #1c5980;
+    background-color: #1c5980;
 }
 
 /* Responsive */
 @media (max-width: 500px) {
-  .container1 {
-    margin: 20px 15px;
-    padding: 20px;
-  }
+    .container1 {
+        margin: 20px 15px;
+        padding: 20px;
+    }
 
- 
+
+}
+
+/*Perfil*/
+.profile-img {
+    width: 40px;
+    height: 40px;
+}
+
+.user-dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+
+.header-perfil {
+    background: linear-gradient(135deg, #55a0f5 0%, #091252 100%);
+}
+
+.header-perfil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.img-perfil {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.datos-perfil-card {
+    border-left: 4px solid #55a0f5;
+    transition: all 0.3s ease;
+}
+
+.datos-perfil-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.datos-perfil-label {
+    letter-spacing: 0.5px;
+}
+
+
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #55a0f5, #091252);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, #55a0f5, #091252);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+}
+
+.btn-custom {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1rem 0;
+    }
+
+    .header-perfil {
+        padding: 2rem 0;
+    }
+
+    .img-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .info-section {
+        padding: 1.5rem;
+    }
+
+    .datos-perfil-card {
+        padding: 1rem;
+    }
+
+    .btn-custom {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/*Reservas*/
+.card-reserva {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-reserva:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.estado-reserva {
+    min-height: 400px;
+}
+
+.header-reserva {
+    background: linear-gradient(135deg, #55a0f5 0%, #091252 100%);
+}
+
+.servicios-reserva {
+    font-size: 0.8rem;
+    margin: 0.1rem;
+}
+
+.titulo-reserva {
+    background: linear-gradient(135deg, #55a0f5 0%, #091252 100%);
+}
+
+/*PRESUPUESTOS*/
+
+/* Ajustes para la sección de sin presupuestos */
+#mensaje-sin-presupuestos {
+    text-align: center;
+    padding: 30px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    margin-bottom: 30px;
+}
+
+#mensaje-sin-presupuestos p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#crear-primer-presupuesto {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    /* Color primario de Bootstrap */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#crear-primer-presupuesto:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el formulario de edición */
+#editar-presupuesto-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#editar-presupuesto-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+#editar-presupuesto-form input[type="text"],
+#editar-presupuesto-form input[type="date"],
+#editar-presupuesto-form input[type="number"],
+#editar-presupuesto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total */
+}
+
+#editar-presupuesto-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#editar-presupuesto-form button {
+    margin-right: 10px;
 }

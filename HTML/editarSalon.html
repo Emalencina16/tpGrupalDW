@@ -26,27 +26,57 @@
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav d-flex gap-4 list-unstyled m-0 p-0 align-items-center text-decoration-none fw-semibold text-black">
-                            <li class="nav-item">
+                        <ul class="navbar-nav d-flex gap-3 list-unstyled m-0 p-0 align-items-center text-decoration-none fw-semibold text-black">
+                            <li class="nav-item" id="infoInstitucionalLink">
                                 <a href="informacionInsti.html" class="nav-link text-decoration-none fw-semibold text-black">Sobre Nosotros</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="contactoLink">
                                 <a href="contacto.html" class="nav-link text-decoration-none fw-semibold text-black">Contacto</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="galeriaLink">
                                 <a href="galeria.html" class="nav-link text-decoration-none fw-semibold text-black">Catálogo</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="nuevoSalonLink">
                                 <a href="nuevoSalon.html" class="nav-link text-decoration-none fw-semibold text-black">Agregar salón</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="loginLink">
+                                <a href="login.html" class="nav-link text-decoration-none fw-semibold text-black">Login</a>
+                            </li>
+                            <li class="nav-item" id="usuariosLink">
+                                <div class="boton_usuarios">
+                                    <a href="tablaUsuarios.html" class="btn fw-semibold">Usuarios</a>
+                                </div>
+                            </li>
+                            <li class="nav-item" id="presupuestoLink">
+                                <a href="presupuestos.html" class="nav-link text-decoration-none fw-semibold text-black">Presupuestos</a>
+                            </li>
+                            <li class="nav-item" id="serviciosLink">
+                                <a href="servicios.html" class="nav-link text-decoration-none fw-semibold text-black">Servicios</a>
+                            </li>
+                            <li class="nav-item" id="reservaLink">
                                 <a href="reserva.html" class="btn-reserva py-2 px-3 bg-primary text-white rounded-2 fw-bold text-decoration-none d-inline-block">Reserva ahora</a>
                             </li>
-                            <li class="nav-item">
-                           <a href="presupuestos.html" class="nav-link text-decoration-none fw-semibold text-black">
-              <i class="fa-solid fa-user"></i>
-            </a>
-          
+                            <!--Perfil-->
+                            <li class="nav-item" id="userProfileNav" style="display: none;">
+                                <div class="dropdown user-dropdown">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img id="navProfileImg" src="" alt="Perfil" class="rounded-circle profile-img me-2 object-fit-cover">
+                                        <span id="navUsername" class="fw-medium text-black"></span>
+                                        <i class="fas fa-chevron-down ms-2 small text-black"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="perfil.html">
+                                            <i class="fas fa-user me-2"></i>Ver Perfil
+                                        </a></li>
+                                        <li><a class="dropdown-item" href="reservasUsuario.html">
+                                            <i class="fas fa-calendar-check me-2"></i>Mis Reservas
+                                        </a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item text-danger" href="#" onclick="cerrarSesion()">
+                                            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+                                        </a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -148,7 +178,8 @@
                 </div>
             </div>
         </footer>
-
+        <script src="../JavaScript/auth.js"></script>
+        <script>verificarSesion();</script>
         <script src="../JavaScript/storage.js"></script>
         <script src="../JavaScript/editarSalon.js"></script>
     </body>

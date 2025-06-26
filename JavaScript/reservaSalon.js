@@ -9,10 +9,26 @@ const salonId = parseInt(urlParams.get("salonId"));
 const salon = salones.find(s => s.id === salonId);
 const salonPrecio = salon ? salon.precio : 0;
 
-// Mostrar el salón seleccionado
-document.getElementById("salonSeleccionado").innerText = salon 
-  ? salon.nombre + " ($" + salon.precio + ")" 
-  : "Salón no encontrado";
+document.addEventListener('DOMContentLoaded', () => {
+  const fullName = sessionStorage.getItem("fullName");
+  const inputNombre = document.getElementById("nombre");
+
+  if (fullName && inputNombre) {
+    inputNombre.value = fullName;
+  }
+});
+
+const selectSalon = document.getElementById("salon");
+
+
+// Llenar opciones con salones desde localStorage
+salones.forEach(salon => {
+  const option = document.createElement("option");
+  option.value = salon.id;
+  option.textContent = `${salon.nombre} ($${salon.precio})`;
+  selectSalon.appendChild(option);
+});
+
 
 // Mostrar los servicios
 const serviciosContainer = document.getElementById("serviciosContainer");

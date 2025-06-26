@@ -1,21 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Inicializa salones en localStorage si no existen
     if (!localStorage.getItem("salones")) {
-        const initialSalones = [
-            { id: 1, nombre: "Salón Encanto", tipo: "Interior", capacidad: 120, direccion: "Av. Sarmiento 1123", precio: 25000, descripcion: "Un salón versátil con un toque de elegancia y calidez.", imagen: "../img/salones%20interior/salonEncanto.png" },
-            { id: 2, nombre: "Terraza Sol", tipo: "Terraza", capacidad: 80, direccion: "Calle Falsa 123", precio: 18000, descripcion: "Terraza al aire libre con vista panorámica.", imagen: "../img/salones%20terraza/terrazaSol.png" },
-            { id: 3, nombre: "Jardín Verde", tipo: "Exterior", capacidad: 150, direccion: "Av. Siempre Viva 742", precio: 22000, descripcion: "Amplio jardín para eventos al aire libre.", imagen: "../img/salones%20exterior/jardinVerde.png" }
-        ];
         localStorage.setItem("salones", JSON.stringify(initialSalones));
     }
 
     // Inicializa servicios en localStorage si no existen
     if (!localStorage.getItem("servicios")) {
-        const initialServicios = [
-            { id: 1, descripcion: "Catering", valor: 5000 },
-            { id: 2, descripcion: "Decoración", valor: 3000 },
-            { id: 3, descripcion: "Música", valor: 4000 }
-        ];
         localStorage.setItem("servicios", JSON.stringify(initialServicios));
     }
 
@@ -30,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const imagenContenedor = document.createElement("div");
     imagenContenedor.id = "imagenSalonContenedor";
+    imagenContenedor.className = "d-flex justify-content-center align-items-center p-0 m-0 my-3";
     if (selectSalon) {
         selectSalon.parentNode.insertBefore(imagenContenedor, selectSalon.nextSibling);
     }
@@ -39,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!selectSalon) return;
 
         selectSalon.innerHTML = "";
+
+         // Agregar opción por defecto
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.text = "Seleccionar salón";
+        selectSalon.add(defaultOption);
+
         const filtroLower = filtro.toLowerCase();
 
         const salonesFiltrados = filtro
@@ -62,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             selectSalon.add(option);
         });
 
-        mostrarImagenSalon(salonesFiltrados[0]);
+        mostrarImagenSalon(null);
         actualizarTotal();
     }
 
@@ -102,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.src = salon.imagen;
             img.alt = salon.nombre;
             img.style.maxWidth = "300px";
-            img.style.marginTop = "10px";
+            img.className = "rounded p-0 m-0 shadow";
             imagenContenedor.appendChild(img);
         }
     }
