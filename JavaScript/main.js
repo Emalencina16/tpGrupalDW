@@ -37,6 +37,27 @@ function mostrarSalones(tipoFiltro) {
       </div>
     `;
 
+    // Botón "Reservar" de esta card
+    const btnReservar = card.querySelector('.btn.btn-primary');
+
+    btnReservar.addEventListener('click', function (e) {
+      e.preventDefault(); // Previene navegación
+
+      const token = sessionStorage.getItem("accessToken");
+
+      // Eliminar alertas anteriores si hay
+      const alertaExistente = card.querySelector('.alert');
+      if (alertaExistente) alertaExistente.remove();
+
+      if (!token) {
+        mostrarModalLogin(); // ✅ Usamos la función global reutilizable
+      } else {
+        window.location.href = "reserva.html";
+      }
+
+    });
+
+
     // Funcion eliminar en galeria
     if (modoEliminarActivo) {
       const btnX = document.createElement("button");
@@ -83,15 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "../HTML/galeria.html";
     });
 
-  btnReserva.addEventListener("click", function () {
-    const token = sessionStorage.getItem("accessToken");
-    console.log("CLICK DESDE EL INDEX");
-    if (!token) {
-      alert("Debes iniciar sesión para reservar un salón.");
-    } else {
-      window.location.href = "reserva.html";
-    }
-  });
+  
 
   // Activar/desactivar modo eliminar
   if (btnEliminarModo) {

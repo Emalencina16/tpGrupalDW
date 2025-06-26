@@ -99,66 +99,63 @@
             </div>
         </header>
     </main>
-    <section
-        class="formulario_salon d-flex flex-column align-items-center justify-content-center py-5 bg-body-secondary">
-        <h1 class="text-uppercase fs-1 fw-bold">Agregar nuevo salón</h1>
-        <form class="w-50 mt-2" id="formSalon">
-            <div class="mb-3">
-                <label for="nombreSalon" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombreSalon">
+
+    <section class=" my-4 d-flex flex-column align-items-center justify-content-center w-100 p-0 m-0">
+        <!-- Header con estadísticas -->
+        <div class="col-12 my-3">
+            <div class="card titulo-reserva text-white rounded-0 text-center">
+                <h2 class="card-title my-4 ">
+                    <i class="fas fa-calendar-check me-2"></i>Mis Reservas
+                </h2>
             </div>
-            <div class="input-group mb-3 d-flex flex-column">
-                <label for="tipoSalon" class="form-label">Tipo de Salón:</label>
-                <select class="form-select w-100 rounded" id="tipoSalon">
-                    <option selected>Seleccionar tipo</option>
-                    <option value="Interior">Interior</option>
-                    <option value="Exterior">Exterior</option>
-                    <option value="Infantil">Infantil</option>
-                    <option value="Terraza">Terraza</option>
-                    <option value="Pileta">Pileta</option>
-                </select>
+        </div>
+
+        <!-- Lista de reservas -->
+        <div id="reservasList" class="row w-100">
+            <!-- Las reservas se cargarán aquí dinámicamente -->
+        </div>
+
+        <!-- Estado vacío -->
+        <div id="noReservations" class="card estado-reserva" style="display: none;">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                <i class="fas fa-calendar-times fa-4x text-muted mb-4"></i>
+                <h4 class="text-muted mb-3">No tienes reservas aún</h4>
+                <p class="text-muted mb-4">¡Realiza tu primera reserva para comenzar a disfrutar de nuestros servicios!
+                </p>
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-plus me-2"></i>Hacer Primera Reserva
+                </a>
             </div>
-            <div class="mb-3">
-                <label for="capacidadSalon" class="form-label">Capacidad:</label>
-                <input type="number" class="form-control" id="capacidadSalon">
-            </div>
-            <div class="mb-3">
-                <label for="direccionSalon" class="form-label">Dirección:</label>
-                <input type="text" class="form-control" id="direccionSalon">
-            </div>
-            <div class="mb-3 d-flex flex-column">
-                <label for="precioSalon" class="form-label">Precio:</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">$</span>
-                    <input type="number" class="form-control" id="precioSalon">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="descripcionSalon" class="form-label">Descripción:</label>
-                <textarea class="form-control" aria-label="With textarea" id="descripcionSalon"></textarea>
-            </div>
-            <button type="submit" class="btn-agregarSalon btn btn-primary ">Agregar Salón</button>
-        </form>
+        </div>
     </section>
 
-    <!-- tabla-->
-    <div class="container mt-5">
-        <h2 class="mb-4 text-primary">Lista de Salones</h2>
-        <div id="tablaSalones" class="table-responsive"></div>
+    <!-- Modal de detalles de reserva -->
+    <div class="modal fade" id="detalleReservaModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header header-reserva text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-calendar-alt me-2"></i>Detalles de la Reserva
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="detalleReservaContent">
+                    <!-- El contenido se cargará dinámicamente -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
-
     <footer class="bg-white text-primary py-5 border-top">
         <div class="container">
             <div class="row gy-4 justify-content-between">
-
-                <!-- Logo -->
                 <div class="col-md-4 text-center text-md-start">
                     <div class="logo-footer">
                         <img src="../img/logo-completo.svg" class="img-fluid mw-25">
                     </div>
                 </div>
-
-                <!-- Info contacto -->
                 <div class="col-md-4">
                     <div class="info-contacto">
                         <p class="fw-bold mb-1">Alquiler de Salones Ambienta</p>
@@ -170,37 +167,27 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Redes sociales -->
                 <div class="col-md-3">
                     <div class="footer-links">
                         <h5 class="mb-2">Seguinos:</h5>
                         <div class="d-flex gap-3">
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-decoration-none text-primary fs-5">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-decoration-none text-primary fs-5"><i
+                                    class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Políticas -->
                 <div class="col-12 d-flex flex-column align-items-center mt-4">
                     <div class="politicas text-center">
                         <a href="#" class="text-primary text-decoration-none mb-1">Política de privacidad</a>
                         <a href="#" class="text-primary text-decoration-none mb-1">Términos y condiciones</a>
                     </div>
                 </div>
-
-                <!-- Copyright -->
                 <div class="col-12 mt-4">
                     <p class="text-center text-muted border-top pt-3 mb-0 small">
                         © 2025 Alquiler de Salones Ambienta. Todos los derechos reservados.
@@ -211,12 +198,8 @@
     </footer>
     <script src="../JavaScript/auth.js"></script>
     <script>verificarSesion();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-    <script src="../JavaScript/storage.js"></script>
-    <script src="../JavaScript/crearSalon.js"></script>
-    <script src="../JavaScript/tablaSalones.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/reservasUsuario.js"></script>
 </body>
 
 </html>
