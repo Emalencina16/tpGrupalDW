@@ -25,6 +25,17 @@ body{
   transition: color 0.3s;
 }
 
+.boton_usuarios{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 40%;
+  font-weight: bolder;
+  background-color: #e676dc;
+}
+.boton_usuarios:hover{
+  color: white;
+}
+
+
 .navbar-nav .nav-link:hover {
   color: #007bff;
 }
