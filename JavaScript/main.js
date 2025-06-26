@@ -67,20 +67,43 @@ function eliminarSalonPorId(id) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const selectTipo = document.getElementById("tipo-salon");
+  const btnExplora = document.querySelector(".btn-explora");
+  const btnReserva = document.querySelector(".btn-reservaInicio");
+  const btnEliminarModo = document.getElementById("btn-eliminar-modo");
 
-  mostrarSalones(selectTipo.value);
-
-  selectTipo.addEventListener("change", () => {
+  if (selectTipo) {
     mostrarSalones(selectTipo.value);
+    
+    selectTipo.addEventListener("change", () => {
+      mostrarSalones(selectTipo.value);
+    });
+  }
+
+  btnExplora.addEventListener("click", function () {
+      window.location.href = "../HTML/galeria.html";
+    });
+
+  btnReserva.addEventListener("click", function () {
+    const token = sessionStorage.getItem("accessToken");
+    console.log("CLICK DESDE EL INDEX");
+    if (!token) {
+      alert("Debes iniciar sesión para reservar un salón.");
+    } else {
+      window.location.href = "reserva.html";
+    }
   });
 
   // Activar/desactivar modo eliminar
-  const btnEliminarModo = document.getElementById("btn-eliminar-modo");
-  btnEliminarModo.addEventListener("click", () => {
-    modoEliminarActivo = !modoEliminarActivo;
-    btnEliminarModo.textContent = modoEliminarActivo
-      ? "Desactivar Eliminar Salones"
-      : "Eliminar Salones";
-    mostrarSalones(selectTipo.value);
-  });
+  if (btnEliminarModo) {
+    btnEliminarModo.addEventListener("click", () => {
+      modoEliminarActivo = !modoEliminarActivo;
+      btnEliminarModo.textContent = modoEliminarActivo
+        ? "Desactivar Eliminar Salones"
+        : "Eliminar Salones";
+      if (selectTipo) {
+        mostrarSalones(selectTipo.value);
+      }
+    });
+  }
+
 });
