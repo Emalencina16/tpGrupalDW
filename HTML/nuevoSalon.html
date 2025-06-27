@@ -102,6 +102,7 @@
     <section
         class="formulario_salon d-flex flex-column align-items-center justify-content-center py-5 bg-body-secondary">
         <h1 class="text-uppercase fs-1 fw-bold">Agregar nuevo salón</h1>
+
         <form class="w-50 mt-2" id="formSalon">
             <div class="mb-3">
                 <label for="nombreSalon" class="form-label">Nombre:</label>
@@ -137,6 +138,12 @@
                 <label for="descripcionSalon" class="form-label">Descripción:</label>
                 <textarea class="form-control" aria-label="With textarea" id="descripcionSalon"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="imagenSalon" class="form-label">Imagen del salón:</label>
+                <input type="file" class="form-control" id="imagenSalon" accept="image/*" required>
+            </div>
+
+<button type="submit" class="btn-agregarSalon btn btn-primary">Agregar Salón</button>
             <button type="submit" class="btn-agregarSalon btn btn-primary ">Agregar Salón</button>
         </form>
     </section>
