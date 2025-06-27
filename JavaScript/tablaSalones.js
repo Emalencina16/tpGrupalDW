@@ -11,6 +11,7 @@ function mostrarTablaSalones() {
   thead.classList.add("thead-dark");
   thead.innerHTML = `
     <tr>
+      <th>Imagen</th>
       <th>Nombre</th>
       <th>Tipo</th>
       <th>Capacidad</th>
@@ -26,7 +27,11 @@ function mostrarTablaSalones() {
 
   salones.forEach(salon => {
     const fila = document.createElement("tr");
-    fila.innerHTML = `
+     fila.innerHTML = `
+      <td>
+        <img src="${salon.imagen}" alt="Imagen del salón" 
+             style="width: 100px; height: auto; object-fit: cover; border-radius: 8px;" />
+      </td>
       <td>${salon.nombre}</td>
       <td>${salon.tipo}</td>
       <td>${salon.capacidad}</td>
@@ -45,7 +50,7 @@ function mostrarTablaSalones() {
 
   const contenedor = document.getElementById("tablaSalones");
   if (contenedor) {
-    contenedor.innerHTML = ""; // Limpiar contenido previo
+    contenedor.innerHTML = "";
     contenedor.appendChild(tabla);
   } else {
     console.warn('No se encontró el contenedor con id "tablaSalones"');
