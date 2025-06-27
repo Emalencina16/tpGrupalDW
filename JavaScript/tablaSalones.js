@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", mostrarTablaSalones);
 
 function mostrarTablaSalones() {
-  const salones = JSON.parse(localStorage.getItem("salones")) || [];
+    const salones = JSON.parse(localStorage.getItem("salones")) || [];
 
-  const tabla = document.createElement("table");
-  tabla.classList.add("table", "table-bordered", "table-hover");
-  tabla.style.width = "100%";
+    const tabla = document.createElement("table");
+    tabla.classList.add("table", "table-bordered", "table-hover");
+    tabla.style.width = "100%";
 
-  const thead = document.createElement("thead");
-  thead.classList.add("thead-dark");
-  thead.innerHTML = `
+    const thead = document.createElement("thead");
+    thead.classList.add("thead-dark");
+    thead.innerHTML = `
     <tr>
       <th>Imagen</th>
       <th>Nombre</th>
@@ -21,13 +21,13 @@ function mostrarTablaSalones() {
       <th>Acciones</th>
     </tr>
   `;
-  tabla.appendChild(thead);
+    tabla.appendChild(thead);
 
-  const tbody = document.createElement("tbody");
+    const tbody = document.createElement("tbody");
 
-  salones.forEach(salon => {
-    const fila = document.createElement("tr");
-     fila.innerHTML = `
+    salones.forEach(salon => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
       <td>
         <img src="${salon.imagen}" alt="Imagen del salón" 
              style="width: 100px; height: auto; object-fit: cover; border-radius: 8px;" />
@@ -43,25 +43,25 @@ function mostrarTablaSalones() {
         <button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">Eliminar</button>
       </td>
     `;
-    tbody.appendChild(fila);
-  });
+        tbody.appendChild(fila);
+    });
 
-  tabla.appendChild(tbody);
+    tabla.appendChild(tbody);
 
-  const contenedor = document.getElementById("tablaSalones");
-  if (contenedor) {
-    contenedor.innerHTML = "";
-    contenedor.appendChild(tabla);
-  } else {
-    console.warn('No se encontró el contenedor con id "tablaSalones"');
-  }
+    const contenedor = document.getElementById("tablaSalones");
+    if (contenedor) {
+        contenedor.innerHTML = "";
+        contenedor.appendChild(tabla);
+    } else {
+        console.warn('No se encontró el contenedor con id "tablaSalones"');
+    }
 }
 
 function eliminarSalon(id) {
-  if (confirm("¿Estás seguro de que querés eliminar este salón?")) {
-    let salones = JSON.parse(localStorage.getItem("salones")) || [];
-    salones = salones.filter(salon => salon.id !== id);
-    localStorage.setItem("salones", JSON.stringify(salones));
-    mostrarTablaSalones(); // Recargar la tabla
-  }
+    if (confirm("¿Estás seguro de que querés eliminar este salón?")) {
+        let salones = JSON.parse(localStorage.getItem("salones")) || [];
+        salones = salones.filter(salon => salon.id !== id);
+        localStorage.setItem("salones", JSON.stringify(salones));
+        mostrarTablaSalones(); // Recargar la tabla
+    }
 }
