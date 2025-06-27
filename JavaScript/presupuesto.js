@@ -31,17 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         selectSalon.innerHTML = "";
 
-         // Agregar opción por defecto
+        // Agregar opción por defecto
         const defaultOption = document.createElement("option");
         defaultOption.value = "";
-        defaultOption.text = "Seleccionar salón";
+        defaultOption.text = "Seleccionar salón disponible";
         selectSalon.add(defaultOption);
 
         const filtroLower = filtro.toLowerCase();
+        const fechaElegida = document.getElementById("fecha")?.value;
 
-        const salonesFiltrados = filtro
+        let salonesFiltrados = filtro
             ? salones.filter(salon => salon.tipo.toLowerCase() === filtroLower)
             : salones;
+
+        // Filtrar por disponibilidad en la fecha elegida
+        const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+        if (fechaElegida) {
+            salonesFiltrados = salonesFiltrados.filter(salon => {
+                return !reservas.some(r => r.salonId === salon.id && r.fecha === fechaElegida);
+            });
+        }
+
 
         if (salonesFiltrados.length === 0) {
             const option = document.createElement("option");
@@ -182,6 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let presupuestosGuardados = JSON.parse(localStorage.getItem('presupuestos')) || [];
             presupuestosGuardados.push(nuevoPresupuesto);
+            
+            // Guarda la reserva asociada a un salón en una fecha específica
+            let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            reservas.push({
+                salonId: parseInt(idSalon),
+                fecha: fecha
+            });
+            localStorage.setItem('reservas', JSON.stringify(reservas));
+
             localStorage.setItem('presupuestos', JSON.stringify(presupuestosGuardados));
 
             Swal.fire({
@@ -206,6 +225,12 @@ document.addEventListener("DOMContentLoaded", () => {
             llenarSelectSalones(selectTematica.value);
         });
     }
+
+    if (document.getElementById("fecha")) {
+    document.getElementById("fecha").addEventListener("change", () => {
+        llenarSelectSalones(selectTematica.value);
+    });
+}
 
     if (selectSalon) {
         selectSalon.addEventListener("change", () => {

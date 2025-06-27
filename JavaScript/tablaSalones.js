@@ -13,6 +13,7 @@ function mostrarTablaSalones() {
     <tr>
       <th>Nombre</th>
       <th>Tipo</th>
+      <th>Estado</th>
       <th>Capacidad</th>
       <th>Dirección</th>
       <th>Precio</th>
@@ -29,6 +30,7 @@ function mostrarTablaSalones() {
     fila.innerHTML = `
       <td>${salon.nombre}</td>
       <td>${salon.tipo}</td>
+      <td>${salon.estado}</td>
       <td>${salon.capacidad}</td>
       <td>${salon.direccion}</td>
       <td>$${salon.precio.toLocaleString()}</td>
